@@ -1,0 +1,930 @@
+{
+  "Rows": {
+    "InLogicalVisibleIndexes": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "Count": 44
+  },
+  "Cols": {
+    "Count": 57
+  },
+  "Values": {
+    "1,1": "艇種",
+    "1,5": "艇番",
+    "1,11": "検索",
+    "1,38": "艇種",
+    "1,42": "艇番",
+    "4,2": "変化点管理日",
+    "4,15": "指令日",
+    "4,18": "エンジン",
+    "4,21": "最新工程表変化日",
+    "4,28": "指令書期限",
+    "4,33": "エンジン必要日",
+    "4,38": "前回工程表変化日",
+    "4,45": "指令書期限",
+    "4,50": "エンジン必要日",
+    "31,1": "変更履歴表示",
+    "34,1": "閉じる",
+    "39,1": "連携モード",
+    "39,9": "kintone連携"
+  },
+  "Formulas": {
+    "5,18": "IF(AH6<>AY6,\"有\",\"\")",
+    "5,15": "IF(AC6<>AT6,\"有\",\"\")"
+  },
+  "AttachInfos": {
+    "1,11": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=データ変更履歴表示!B3"
+                      }
+                    ]
+                  },
+                  "compareType": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+                    "TargetTableName": "投入計画変化管理",
+                    "SqlCondition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "SubConditions": [
+                        {
+                          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                          "CompareType": 6,
+                          "ColumnBindingInfo": {
+                            "TableName": "投入計画変化管理",
+                            "ColumnName": "艇種",
+                            "GUID": "f861a0aa-57f7-40c3-98e1-5d48f49d79b1"
+                          },
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=データ変更履歴表示!B3"
+                          }
+                        },
+                        {
+                          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                          "CompareType": 6,
+                          "ColumnBindingInfo": {
+                            "TableName": "投入計画変化管理",
+                            "ColumnName": "艇番",
+                            "GUID": "a5aaf735-99fe-4f3e-b134-67e72e42a7d9"
+                          },
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=データ変更履歴表示!F3"
+                          }
+                        }
+                      ]
+                    },
+                    "ID": "7494f95d80894296a6bdcbdac5332859"
+                  }
+                ],
+                "ID": "110bd44a-ceb2-4b86-b1e1-375c464b720a"
+              }
+            ]
+          }
+        ],
+        "Text": "検索",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "2,1": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "2,5": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "4,1": {
+      "ListViewInfo": {
+        "Name": "リストビュー1",
+        "TableName": "投入計画変化管理",
+        "RowIndex": 4,
+        "ColumnIndex": 1,
+        "RowCount": 26,
+        "ColumnCount": 55,
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Medium2",
+        "CurrentRowChangedCommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!AM3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!H6"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!AQ3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!L6"
+                }
+              }
+            ]
+          }
+        ],
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "ColumnOperation": 2
+      }
+    },
+    "5,2": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "データ設定日",
+        "GUID": "cbbd4c72-4052-4743-9137-935fb18e2e01"
+      }
+    },
+    "5,7": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "艇種",
+        "GUID": "74532d22-8a62-4554-8fcc-af8b6ae27f9a"
+      }
+    },
+    "5,11": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "艇番",
+        "GUID": "620c019f-6f2a-4b19-86d0-52ba93b6a29c"
+      }
+    },
+    "5,15": {
+      "RulesGuidList": [
+        "d1a59267-f41e-4ec1-a0ee-f549ad7e0b48"
+      ]
+    },
+    "5,18": {
+      "RulesGuidList": [
+        "cd667029-7991-449a-b45f-2212f0941ef5"
+      ]
+    },
+    "5,21": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "設定日付_1",
+        "GUID": "3c1d01fa-b563-4f2e-aefa-e453939ea0c4"
+      }
+    },
+    "5,28": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "大型小型個別_1",
+        "GUID": "82f15e00-44ac-42cd-aab1-4d4b74e2e847"
+      }
+    },
+    "5,33": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "エンジン必要日_1",
+        "GUID": "718b9fb6-c1ce-4d18-9e99-5f405330c6ed"
+      }
+    },
+    "5,38": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "設定日付_2",
+        "GUID": "dd3c032a-82aa-4d41-9248-ce6f9a7579aa"
+      }
+    },
+    "5,45": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "大型小型個別_2",
+        "GUID": "187c4ae6-1e96-4513-80ff-46752a719ee7"
+      }
+    },
+    "5,50": {
+      "BindingInfo": {
+        "TableName": "投入計画変化管理",
+        "ColumnName": "エンジン必要日_2",
+        "GUID": "bafa16a7-c6d0-483a-8a99-c283c0b2fbb1"
+      }
+    },
+    "31,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "データ履歴個別表示",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!AM3"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=データ履歴個別表示!B3"
+                }
+              },
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=データ変更履歴表示!AQ3"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=データ履歴個別表示!G3"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "変更履歴表示",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "34,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon"
+          }
+        ],
+        "Text": "閉じる",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "39,9": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "kintoneにデータを連携しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "kintone2SQLServer",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "updateSQLServer",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "SQLServer2kintone",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": "kintoneにデータを連携しました！"
+                  }
+                ],
+                "ID": "3b33ae67-cc07-4066-a63f-b68037780cc9"
+              }
+            ]
+          }
+        ],
+        "Text": "kintone連携",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 0,
+        "FontFamily": 2,
+        "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 2,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 0,
+        "FontFamily": 2,
+        "Foreground": 1
+      },
+      {
+        "FontFamily": 2
+      },
+      {
+        "FontFamily": 2,
+        "Foreground": 1
+      },
+      {
+        "Background": 4,
+        "FontFamily": 2,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Formatter": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 2,
+        "Formatter": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontSize": 13.333333333333332
+      },
+      {
+        "Background": 6,
+        "FontSize": 13.333333333333332,
+        "Foreground": 1
+      },
+      {
+        "Background": 4,
+        "FontFamily": 2,
+        "FontSize": 13.333333333333332,
+        "Foreground": 1
+      },
+      {
+        "Background": 4,
+        "FontFamily": 2,
+        "FontSize": 13.333333333333332,
+        "Foreground": 1,
+        "Formatter": 3
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Formatter": 7,
+        "HorizontalAlignment": 8
+      },
+      {
+        "FontFamily": 2,
+        "FontSize": 13.333333333333332,
+        "Formatter": 7,
+        "HorizontalAlignment": 8
+      },
+      {
+        "Background": 0,
+        "FontFamily": 2,
+        "Foreground": 1,
+        "Formatter": 3
+      },
+      {
+        "FontFamily": 2,
+        "Foreground": 1,
+        "Formatter": 3
+      },
+      {
+        "FontFamily": 2,
+        "Foreground": 1,
+        "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 9,
+        "FontFamily": 2,
+        "Foreground": 1,
+        "Formatter": 3
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Accent 6 60",
+        "black",
+        "Body",
+        "[AUTO]General",
+        "Accent 1 80",
+        "@",
+        "Accent 4 80",
+        "yyyy/m/d",
+        "Right",
+        "Accent 3 60"
+      ],
+      "Borders": [
+        {
+          "Color": 1
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,1": 0,
+      "1,2": 1,
+      "1,3": 1,
+      "1,4": 1,
+      "1,5": 2,
+      "1,6": 3,
+      "1,7": 3,
+      "1,8": 3,
+      "1,11": 4,
+      "1,12": 5,
+      "1,13": 5,
+      "1,14": 5,
+      "1,15": 6,
+      "1,16": 6,
+      "1,17": 6,
+      "1,18": 6,
+      "1,19": 6,
+      "1,20": 6,
+      "1,21": 5,
+      "1,22": 5,
+      "1,23": 5,
+      "1,24": 5,
+      "1,25": 5,
+      "1,26": 5,
+      "1,27": 5,
+      "1,28": 5,
+      "1,29": 5,
+      "1,38": 7,
+      "1,39": 3,
+      "1,40": 3,
+      "1,41": 3,
+      "1,42": 7,
+      "1,43": 3,
+      "1,44": 3,
+      "1,45": 3,
+      "2,1": 8,
+      "2,2": 9,
+      "2,3": 9,
+      "2,4": 10,
+      "2,5": 11,
+      "2,6": 9,
+      "2,7": 9,
+      "2,8": 10,
+      "2,11": 5,
+      "2,12": 5,
+      "2,13": 5,
+      "2,14": 5,
+      "2,15": 6,
+      "2,16": 6,
+      "2,17": 6,
+      "2,18": 6,
+      "2,19": 6,
+      "2,20": 6,
+      "2,21": 5,
+      "2,22": 5,
+      "2,23": 5,
+      "2,24": 5,
+      "2,25": 5,
+      "2,26": 5,
+      "2,27": 5,
+      "2,28": 5,
+      "2,29": 5,
+      "2,38": 3,
+      "2,39": 3,
+      "2,40": 3,
+      "2,41": 3,
+      "2,42": 3,
+      "2,43": 3,
+      "2,44": 3,
+      "2,45": 3,
+      "4,1": 12,
+      "4,2": 12,
+      "4,7": 12,
+      "4,11": 12,
+      "4,15": 12,
+      "4,18": 12,
+      "4,21": 13,
+      "4,28": 13,
+      "4,33": 13,
+      "4,38": 14,
+      "4,45": 15,
+      "4,50": 15,
+      "4,55": 12,
+      "5,1": 12,
+      "5,2": 16,
+      "5,7": 12,
+      "5,11": 12,
+      "5,21": 16,
+      "5,28": 16,
+      "5,33": 16,
+      "5,38": 17,
+      "5,45": 17,
+      "5,50": 17,
+      "5,55": 12,
+      "31,1": 18,
+      "31,2": 5,
+      "31,3": 5,
+      "31,4": 5,
+      "31,5": 5,
+      "31,6": 5,
+      "32,1": 5,
+      "32,2": 5,
+      "32,3": 5,
+      "32,4": 5,
+      "32,5": 5,
+      "32,6": 5,
+      "32,32": 5,
+      "33,1": 19,
+      "33,2": 19,
+      "33,3": 19,
+      "33,4": 19,
+      "33,5": 19,
+      "33,6": 19,
+      "33,10": 19,
+      "33,11": 19,
+      "33,12": 19,
+      "33,13": 19,
+      "33,14": 19,
+      "33,15": 19,
+      "33,32": 5,
+      "34,1": 18,
+      "34,2": 5,
+      "34,3": 5,
+      "34,4": 5,
+      "34,5": 5,
+      "34,6": 5,
+      "34,10": 19,
+      "34,11": 19,
+      "34,12": 19,
+      "34,13": 19,
+      "34,14": 19,
+      "34,15": 19,
+      "34,32": 5,
+      "35,1": 5,
+      "35,2": 5,
+      "35,3": 5,
+      "35,4": 5,
+      "35,5": 5,
+      "35,6": 5,
+      "35,10": 19,
+      "35,11": 19,
+      "35,12": 19,
+      "35,13": 19,
+      "35,14": 19,
+      "35,15": 19,
+      "35,32": 5,
+      "36,1": 19,
+      "36,2": 19,
+      "36,3": 19,
+      "36,4": 19,
+      "36,5": 19,
+      "36,6": 19,
+      "36,9": 19,
+      "36,10": 19,
+      "36,11": 19,
+      "36,12": 19,
+      "36,13": 19,
+      "36,14": 19,
+      "36,32": 5,
+      "37,1": 19,
+      "37,2": 19,
+      "37,3": 19,
+      "37,4": 19,
+      "37,5": 19,
+      "37,6": 19,
+      "37,9": 19,
+      "37,10": 19,
+      "37,11": 19,
+      "37,12": 19,
+      "37,13": 19,
+      "37,14": 19,
+      "37,32": 5,
+      "38,1": 19,
+      "38,2": 19,
+      "38,3": 19,
+      "38,4": 19,
+      "38,5": 19,
+      "38,6": 19,
+      "38,9": 19,
+      "38,10": 19,
+      "38,11": 19,
+      "38,12": 19,
+      "38,13": 19,
+      "38,14": 19,
+      "38,32": 5,
+      "39,1": 20,
+      "39,2": 1,
+      "39,3": 1,
+      "39,4": 1,
+      "39,5": 1,
+      "39,6": 1,
+      "39,9": 21,
+      "39,10": 5,
+      "39,11": 5,
+      "39,12": 5,
+      "39,13": 5,
+      "39,14": 5,
+      "39,32": 5,
+      "40,1": 20,
+      "40,2": 3,
+      "40,3": 3,
+      "40,4": 3,
+      "40,5": 3,
+      "40,6": 3,
+      "40,9": 5,
+      "40,10": 5,
+      "40,11": 5,
+      "40,12": 5,
+      "40,13": 5,
+      "40,14": 5,
+      "40,32": 5,
+      "41,1": 19,
+      "41,2": 19,
+      "41,3": 19,
+      "41,4": 19,
+      "41,5": 19,
+      "41,6": 19,
+      "41,9": 19,
+      "41,10": 19,
+      "41,11": 19,
+      "41,12": 19,
+      "41,13": 19,
+      "41,14": 19,
+      "41,32": 5,
+      "42,1": 19,
+      "42,2": 19,
+      "42,3": 19,
+      "42,4": 19,
+      "42,5": 19,
+      "42,6": 19,
+      "42,9": 19,
+      "42,10": 19,
+      "42,11": 19,
+      "42,12": 19,
+      "42,13": 19,
+      "42,14": 19,
+      "42,32": 5
+    },
+    "SheetStyle": {
+      "FontFamily": 2
+    }
+  },
+  "Spans": [
+    "1,1,1,4",
+    "1,5,1,4",
+    "1,11,2,4",
+    "5,2,1,5",
+    "5,7,1,4",
+    "5,11,1,4",
+    "5,21,1,7",
+    "5,33,1,5",
+    "5,38,1,7",
+    "5,45,1,5",
+    "5,28,1,5",
+    "5,50,1,5",
+    "5,15,1,3",
+    "5,18,1,3",
+    "2,1,1,4",
+    "2,5,1,4",
+    "31,1,2,6",
+    "39,9,2,6",
+    "6,1,24,55",
+    "34,1,2,6",
+    "39,1,1,6",
+    "40,1,1,6",
+    "1,38,1,4",
+    "2,38,1,4",
+    "1,42,1,4",
+    "2,42,1,4",
+    "4,2,1,5",
+    "4,7,1,4",
+    "4,11,1,4",
+    "4,15,1,3",
+    "4,18,1,3",
+    "4,21,1,7",
+    "4,28,1,5",
+    "4,33,1,5",
+    "4,38,1,7",
+    "4,45,1,5",
+    "4,50,1,5"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "受注業務Gタスク管理",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=データ変更履歴表示!B41"
+                  }
+                ]
+              },
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=データ変更履歴表示!35:37"
+                    },
+                    "Value": true
+                  }
+                ]
+              }
+            ],
+            "ID": "dc572290-cfe2-4606-96fa-5cf636cf648d"
+          },
+          {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+                "PropertyItemsList": [
+                  {
+                    "Location": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=データ変更履歴表示!35:37"
+                    },
+                    "Value": false
+                  }
+                ]
+              }
+            ],
+            "ID": "a6d0f7e9-1a55-42fa-8b69-69c97b1c8194"
+          }
+        ]
+      },
+      {
+        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+        "ConditionAndCommandPairList": [
+          {
+            "Condition": {
+              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+              "param": {
+                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                "cellLocations": [
+                  {
+                    "SerializeProperty": "=データ変更履歴表示!B3"
+                  }
+                ]
+              },
+              "compareType": 1
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+                "TargetTableName": "投入計画変化管理",
+                "SqlCondition": {
+                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                  "SubConditions": [
+                    {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "投入計画変化管理",
+                        "ColumnName": "艇種",
+                        "GUID": "f861a0aa-57f7-40c3-98e1-5d48f49d79b1"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=データ変更履歴表示!B3"
+                      }
+                    },
+                    {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "ColumnBindingInfo": {
+                        "TableName": "投入計画変化管理",
+                        "ColumnName": "艇番",
+                        "GUID": "a5aaf735-99fe-4f3e-b134-67e72e42a7d9"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=データ変更履歴表示!F3"
+                      }
+                    }
+                  ]
+                },
+                "ID": "ed37fb46a6634e03a9f4fc716c336765"
+              }
+            ],
+            "ID": "7a5ef263-9e0a-44af-aa1d-5cb0b004207d"
+          }
+        ]
+      }
+    ],
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "ConditionFormatRulesCollection": {
+      "Rules": [
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "有",
+          "GUID": "d1a59267-f41e-4ec1-a0ee-f549ad7e0b48",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "有",
+          "Priority": 1,
+          "GUID": "cd667029-7991-449a-b45f-2212f0941ef5",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        }
+      ]
+    }
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//GBjztfIfIzPHDQtr6XsnxaI7v9PrwKEJQgVmGojvOwRe7V20B7QuRlVUcy2uAbGpYeLJoqIQB9Xu7DCwFd0ygKHgMZIoauSNGkvMDyhMw0VVOkIDY9Rtj70BwYHLXCD4MLHVV/XMGj+lwkFkeTcZB6USMwsDNSqvcbLkmfA1UqSOfpOCNfxt86qwpoULvAlKSji9YpAZdfa9CuIj8ZFuf/mW4nfGo+RC8DPSEJIN2AfaUmKzN+BN+5aIk7BWxg276WBvWDih29Zf9yRdF05MXZnQQHiy7WijubUPwBF2yVQUbRrb3zcXJLKt6ZfiTQpbI4/Be4v4MaE2Rh249Yh0l4nl8lkq9KgLTDyHJUM8mo9OYhyqo5tm0gRDCntDZa0IHl6HFuYFYm1gNe6GA92yPD02bPUzrjMbqJyZFMdNFZQqKGtGhMCKAC6CjeDUihuGrlaOmuh0GV/0Aw52wtqGmdQUte9RbKLieXIr67bu3PwmwGn5jeCOt9z2vvqAbWEF2tRqaBdzZvEjxD7HJ8QlvC61pLLcy83+SnyGaLWaD5jCStzaMjVDsfZo+PAwM5c3BQB/aANX6POvyIbVaWoXTq4fXAQpHYwv/fSBp5JSi57MyVMIyV9pOGnmzgqALghwNCnnEVNr/V6xAcMLoYANPMIALeOXKn6F1eQwhzrHimaTk7qbdYCmFTVFgjg/vZzBHitVj184WwO49JEhLxVTlNA1/MQ7ZLRcqKcG+DU+/pCOkDQ+a2ZJlnSqFCaHvWDiuLXFYKde6o523kZUEElfcr/PTAI0z6Uleo2JkiePa5WZ/gYWEGD3yb+hAciNEFMHZA43ng2+qOPt31rnqiBmpNAy1umzFSDYmbOEHrberkP4i6qFzMuOqyxezTTfEXASFd15iEetAZE2jk2aVBNxgQ==|920

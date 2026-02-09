@@ -1,0 +1,81 @@
+{
+  "Name": "SQLServer2kintone",
+  "Description": "SQLServerで更新した情報でkintoneをレコード更新する",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.Commands.ServerImportExportCSVCommand, ServerDesignerCommon",
+      "CSVOperation": 1,
+      "FilePath": "f:\\temp\\投入計画変化_kintone用インポート.csv",
+      "TableName": "投入計画_kintone連携用",
+      "Columns": [
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "レコード番号",
+            "GUID": "32ece4e4-a99a-4f03-8178-784564670aff"
+          },
+          "CSVColumnNameOrIndex": "レコード番号"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "指令書期限",
+            "GUID": "78813487-97c0-437e-8270-a5dd2206a916"
+          },
+          "CSVColumnNameOrIndex": "指令書期限"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "旧_指令書期限",
+            "GUID": "021e608c-7e5b-43db-abd3-06cd198dd125"
+          },
+          "CSVColumnNameOrIndex": "旧_指令書期限"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "エンジン必要日",
+            "GUID": "91daacca-8471-4362-9419-23fce55b5c0c"
+          },
+          "CSVColumnNameOrIndex": "エンジン必要日"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "旧_エンジン必要日",
+            "GUID": "d72f859c-0f87-4f87-b248-488bdc7ede4b"
+          },
+          "CSVColumnNameOrIndex": "旧_エンジン必要日"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.BatchProgramCommand, ServerDesignerCommon",
+      "Path": "\"F:\\cli-kintone-win\\cli-kintone.exe\"",
+      "Arguments": "record import --base-url https://ymia.cybozu.com --api-token FytCf9YJPposhLnY2LrkOh07gYrdEKkKcytSKHNS --app 1277 --file-path e:\\temp\\kintone.csv --update-key レコード番号"
+    }
+  ]
+}

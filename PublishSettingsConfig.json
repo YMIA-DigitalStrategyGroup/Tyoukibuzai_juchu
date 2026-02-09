@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "サーバーへ発行1",
+    "ApplicationUrl": "http://YMIADIGITALSV01/受注業務管理",
+    "PublishSettings": {
+      "IsPrivateServer": true,
+      "ServerName": "YMIADIGITALSV01",
+      "UserName": "AA121806",
+      "SitePort": 80,
+      "AppName": "受注業務管理",
+      "AppStartPage": "",
+      "TakeServeronline": true,
+      "PublishRolesToServer": true
+    }
+  },
+  {
+    "Name": "サーバーへ発行2",
+    "ApplicationUrl": "http://YMIADIGITALSV01/test受注業務管理",
+    "PublishSettings": {
+      "IsPrivateServer": true,
+      "ServerName": "YMIADIGITALSV01",
+      "UserName": "Administrator",
+      "SitePort": 80,
+      "AppName": "test受注業務管理",
+      "AppStartPage": "",
+      "TakeServeronline": true,
+      "PublishRolesToServer": true
+    }
+  }
+]

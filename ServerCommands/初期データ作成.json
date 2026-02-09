@@ -1,0 +1,98 @@
+{
+  "Name": "初期データ作成",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "最新データ日付",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "比較データ日付",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "本日日付",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "SqlServer1",
+      "Params": {},
+      "SqlStatement": "DELETE FROM 投入計画変化管理",
+      "ID": "d1e91dab4e4a4383876c13e8682d4ec7",
+      "Comments": "管理データ削除"
+    },
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "satoru_kishiyama@yanmar.com",
+      "EnhancedRecipient": {
+        "CommonValue": "satoru_kishiyama@yanmar.com"
+      },
+      "Subject": "投入データ管理",
+      "Content": "insert into 投入計画変化管理 \r\nselect [=本日日付], \r\nTK.艇種, \r\nTK.艇番,\r\nTK.設定日付,\r\nTK.製造ライン名,\r\nTK.枠名,\r\nTK.担当,\r\nTK.エンジン,\r\nTK.充当先,\r\n受注確定期限,\r\n大型小型個別,\r\n計画生産メニュー工事,\r\n出図,\r\n積層投入,\r\n組立投入日,\r\n種別,\r\nエンジン必要日,\r\n標準LO予定日,\r\n標準完成予定日,\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n''  \r\nfrom 投入計画管理 TK where 設定日付=[=最新データ日付]",
+      "ID": "3f20a51a279b4cbebdd7d84747d0921a"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "SqlServer1",
+      "Params": {
+        "最新データ日付": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=最新データ日付"
+          },
+          "Item2": 22
+        },
+        "本日日付": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=本日日付"
+          },
+          "Item2": 22
+        }
+      },
+      "SqlStatement": "insert into 投入計画変化管理 \r\nselect @本日日付, \r\nTK.艇種, \r\nTK.艇番,\r\nTK.設定日付,\r\nTK.製造ライン名,\r\nTK.枠名,\r\nTK.担当,\r\nTK.エンジン,\r\nTK.充当先,\r\n受注確定期限,\r\n大型小型個別,\r\n計画生産メニュー工事,\r\n出図,\r\n積層投入,\r\n組立投入日,\r\n種別,\r\nエンジン必要日,\r\n標準LO予定日,\r\n標準完成予定日,\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n'',\r\n''  \r\nfrom 投入計画管理 TK where 設定日付=@最新データ日付",
+      "ID": "c14f237021b64401b0da6dc3e2e03267",
+      "Comments": "最新データ日付の設定"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "SqlServer1",
+      "Params": {
+        "比較データ日付": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=比較データ日付"
+          },
+          "Item2": 22
+        }
+      },
+      "SqlStatement": "update 投入計画変化管理 set\r\n設定日付_2 = @比較データ日付, \r\n製造ライン名_2 = tk.製造ライン名,\r\n枠名_2 = tk.枠名,\r\n担当_2 = tk.担当,\r\nエンジン_2 = tk.エンジン,\r\n充当先_2 = tk.充当先,\r\n受注確定期限_2 = tk.受注確定期限,\r\n大型小型個別_2 = tk.大型小型個別,\r\n計画生産メニュー工事_2 = tk.計画生産メニュー工事,\r\n出図_2 = tk.出図,\r\n積層投入_2 = tk.積層投入,\r\n組立投入日_2 = tk.組立投入日,\r\n種別_2 = tk.種別, \r\nエンジン必要日_2 = tk.エンジン必要日,\r\n標準LO予定日_2 = tk.標準LO予定日,\r\n標準完成予定日_2 = tk.標準完成予定日\r\nfrom 投入計画変化管理 th\r\ninner join 投入計画管理 tk on \r\nth.艇種 = tk.艇種 and \r\nth.艇番 = tk.艇番 and\r\ntk.設定日付 = @比較データ日付",
+      "ID": "d736151f48344e08996127955708e321",
+      "Comments": "最新データ日付の設定"
+    }
+  ]
+}

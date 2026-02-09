@@ -1,0 +1,55 @@
+{
+  "Name": "メール送信",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "艇種",
+          "DataValidationInfo": {},
+          "TestData": "EX38A"
+        },
+        {
+          "Name": "艇番",
+          "DataValidationInfo": {},
+          "TestData": "5192"
+        }
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "%CurrentUser%",
+      "EnhancedRecipient": {
+        "CommonValue": "satoru_kishiyama@yanmar.com"
+      },
+      "Subject": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=艇種&\" \"&艇番&\"データ更新\""
+      },
+      "Content": "資材部　殿\r\nお疲れ様です。\r\n\r\n[=艇種] 　[=艇番]\r\n\r\nの長納期部材のシステム登録が完了しましたので、\r\nご確認の程よろしくお願いします。",
+      "ID": "0c466f33d0bd4818bef2e0ceccc833f9"
+    }
+  ]
+}

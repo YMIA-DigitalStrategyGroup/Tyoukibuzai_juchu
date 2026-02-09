@@ -1,0 +1,147 @@
+{
+  "Name": "kintone2SQLServer",
+  "Description": "kintoneに格納した受注業務のデータをダウンロードして、SQLServer上の投入計画変化データに投入する",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "InvokeTriggerTestData": {
+        "UserName": "誰でも"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "SqlServer1",
+      "Params": {},
+      "SqlStatement": "DELETE FROM [投入計画_kintone連携用]",
+      "ID": "41bf0b23e3ed42b78c636b77d48bda65",
+      "Comments": "kintone連携用テーブルの削除"
+    },
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "satoru_kishiyama@yanmar.com",
+      "EnhancedRecipient": {
+        "CommonValue": "satoru_kishiyama@yanmar.com"
+      },
+      "Subject": "TEST1",
+      "Content": "TEST1",
+      "ID": "1e2cfde44da44c469d6e806922cc3885"
+    },
+    {
+      "$type": "Forguncy.Model.BatchProgramCommand, ServerDesignerCommon",
+      "Path": "\"F:\\temp\\投入計画出力用.bat\"",
+      "WorkingDirectory": "F:\\temp"
+    },
+    {
+      "$type": "Forguncy.Model.BatchProgramCommand, ServerDesignerCommon",
+      "Path": "\"F:\\cli-kintone-win\\cli-kintone.exe\"",
+      "Arguments": " record export --base-url https://ymia.cybozu.com/ --api-token FytCf9YJPposhLnY2LrkOh07gYrdEKkKcytSKHNS --app 1277 > f:\\temp\\投入計画変化_kintone用.csv",
+      "WorkingDirectory": "F:\\cli-kintone-win",
+      "Disabled": true
+    },
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "From": "satoru_kishiyama@yanmar.com",
+      "EnhancedRecipient": {
+        "CommonValue": "satoru_kishiyama@yanmar.com"
+      },
+      "Subject": "TEST2",
+      "Content": "TEST2",
+      "ID": "df28e0b527f341e98378035e41843fdd"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.ServerImportExportCSVCommand, ServerDesignerCommon",
+      "FilePath": "f:\\temp\\投入計画変化_kintone用.csv",
+      "TableName": "投入計画_kintone連携用",
+      "Columns": [
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "レコード番号",
+            "GUID": "20c5d403-a41e-41c0-bef1-e8d0329d1aee"
+          },
+          "CSVColumnNameOrIndex": "レコード番号"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "艇種艇番",
+            "GUID": "cb0bdfd4-120a-40ba-a7bf-64f8bf8943ed"
+          },
+          "CSVColumnNameOrIndex": "艇種艇番"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "艇種",
+            "GUID": "c71667e1-4d8a-455f-b9a5-564ba2539900"
+          },
+          "CSVColumnNameOrIndex": "艇種"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "艇番",
+            "GUID": "00891acc-fe53-4ed1-b313-9d0d434bc7fd"
+          },
+          "CSVColumnNameOrIndex": "艇番"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "指令書期限",
+            "GUID": "b58c766b-355d-4081-b8e9-df089fdf2e4f"
+          },
+          "CSVColumnNameOrIndex": "指令書期限"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "旧_指令書期限",
+            "GUID": "fb968424-ea8b-413c-8ff1-f8e7a1602f41"
+          },
+          "CSVColumnNameOrIndex": "旧_指令書期限"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "エンジン必要日",
+            "GUID": "5796a442-3ade-4395-bdba-e5d34e0dceab"
+          },
+          "CSVColumnNameOrIndex": "エンジン必要日"
+        },
+        {
+          "BindingColumn": {
+            "TableName": "投入計画_kintone連携用",
+            "ColumnName": "旧_エンジン必要日",
+            "GUID": "7aba741e-511f-4a8c-9b6f-df9a7fcce985"
+          },
+          "CSVColumnNameOrIndex": "旧_エンジン必要日"
+        }
+      ],
+      "ImportCSVEncoding": "UTF-8",
+      "RowDelimiter": "\\r\\n",
+      "ColumnDelimiter": ",",
+      "TextQualifier": "\"",
+      "ConvertDateTime": false
+    }
+  ]
+}

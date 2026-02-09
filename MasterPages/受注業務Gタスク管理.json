@@ -1,0 +1,204 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      }
+    },
+    "Count": 49
+  },
+  "Cols": {
+    "InLogicalVisibleIndexes": [
+      89,
+      90
+    ],
+    "Count": 110
+  },
+  "AttachInfos": {
+    "1,1": {
+      "CellType": {
+        "$type": "Forguncy.ImageCellType, ServerDesignerCommon",
+        "ImagePath": "fgc_logo_light.svg"
+      }
+    },
+    "2,96": {
+      "CellType": {
+        "$type": "Forguncy.CurrentUserCellType, ServerDesignerCommon",
+        "CellCustomValue": "%CurrentUser%",
+        "ShowCircleUserPicture": true,
+        "NavigateSettingWhenLogout": {
+          "NavigateWhenLogoutMode": 1
+        }
+      }
+    },
+    "7,0": {
+      "CellType": {
+        "$type": "Forguncy.CustomMenu.ForguncyMenuCellType, Forguncy.CustomMenu",
+        "TemplateKey": "_RS_Dark_ThemeStyle2",
+        "Items": [
+          {
+            "Text": "タスク管理表",
+            "IconPath": "Navigation/165_home_3.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "受注業務G作業管理"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Text": "変更履歴",
+            "IconPath": "Navigation/183_table_2.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ],
+            "SubItems": [
+              {
+                "Text": "変更比較表示",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "データ変更履歴表示"
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              },
+              {
+                "Text": "変更履歴一覧",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "データ履歴一覧"
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              }
+            ]
+          },
+          {
+            "Text": "管理データ作成",
+            "IconPath": "Chart/363_column_chart_2.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "管理データ作成"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "Orientation": 0,
+        "MenuLevelsStyle": [
+          {
+            "FontSize": 17.3333333333333,
+            "Height": 45.0,
+            "Width": 200.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          },
+          {
+            "FontSize": 16.0,
+            "Height": 32.0,
+            "Width": 200.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          }
+        ]
+      }
+    },
+    "9,0": {
+      "IsPlaceHolderCell": true
+    }
+  },
+  "StyleDatas": {
+    "Types": {
+      "Strs": [
+        "Body"
+      ]
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "1,1,5,10",
+    "9,0,40,110",
+    "2,96,3,14",
+    "7,0,2,110"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.MasterPage, ServerDesignerCommon",
+    "PageLoadedCommandList": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  },
+  "BackgroundPictures": [
+    {
+      "FitToBrowserWidth": true,
+      "FitToBrowserHeight": true,
+      "Repeat": true,
+      "Name": "515397b3-ef9b-4f31-a45b-aa3c3ce18665",
+      "DisplayName": "背景画像1",
+      "ForguncyPictureName": "PCMasterBackground",
+      "ForguncyPictureSourceType": 2,
+      "Stretch": 2,
+      "Size": "200,210"
+    },
+    {
+      "Name": "d7fb6181-e71a-4167-8b3d-6a2865f62b2a",
+      "DisplayName": "背景画像2",
+      "ForguncyPictureName": "PCMasterBanner",
+      "ForguncyPictureSourceType": 2,
+      "Stretch": 3,
+      "Size": "2200,100"
+    }
+  ]
+}//iCJ/nYvLjGYA+MHTDbtf7WsE68sVGSuEzeDqqE91qIw9NxLsWdbM+qDXfyplo0lfoFU6sul2HabIVDtC0ftxhyQ8Y3x2poDNT0Or2rc+beWflLdCTukmul+wfnMIRy73cB4t1BkwqIc0MvJFWJe0v58c9O8MxSsyTgCiNWzFy2luGKoLXOS88KEJ3yCTIY7XrRqpvjGjUnZqqANkLDJH04UctyGqsrZVGaiHVwDi2D5MtGpIF2Nt2fSIBWRnIkMbc4jGzwSzATpYKQCRUF5ccrzdickk9c6DEEqS7em4rf6Ijydll7fWy5zdJ9Jmjp4tDXaY0pFMK6mL6KphT24FmYiHSjzdNZ/hkwDTpBvdyJVEzA5XOrMUJUdlEEmoyz44Yo0tLRbmmdlO61OVyuUE78Ua4ZGC2izh8+14jpLrij7nNXSY4n/zQL5CquYWkZyeMIql4H7i0rSj9QDd3Y2S4VLo1J7r5ylscbbM2FN4O/3OjrzFuPm7rEv+MUhSr/mCEvBLjCRy8LJHsazdSqnL7oEVHYfJK+VT/+avEyrerEuX2XMPTXFsX0qZEh3hMhD0I+L10IHJjxmzr6dNLVwP8jDGXH39zLelfYBfeXUJzNILijiBWp3Mb6Snr/amRZXd1O3g2EcDKuh146X/YH7WSVU8zxWfXkzYryk1KlsciXOjGt1AjRno/DYgPT/XaHu/Bco/zpxmPklI8L/qvxmJjUPsTgFHxNvI1bt/692xzKwrWlTQbJDZOTShnXG75HXmuEHW/KXegeZlMwiKu5cjo7RP5Vbwi3Z3t4mYRhc10FOQQkMSr3w4rzFHTdjLALaNE+lazpKFhMWPbEVWEi2AM5eLYov7qXkKsb5xyTMjlgdbiFUT69vhQHccfnLd4x/J29h6fl3fc3HH7UQNoiXU/g==|920

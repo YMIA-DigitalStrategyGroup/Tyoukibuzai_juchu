@@ -1,0 +1,3983 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 41.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "Count": 45
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "140": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 36.0
+        }
+      },
+      "143": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 29.0
+        }
+      },
+      "144": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 22.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      30,
+      31,
+      32,
+      33,
+      34,
+      59,
+      60,
+      61,
+      62,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      118,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "Count": 175
+  },
+  "Values": {
+    "1,2": "艇種",
+    "1,6": "艇番",
+    "1,23": "検　索",
+    "1,35": "クリア",
+    "1,45": "本日日付",
+    "1,53": "データ更新",
+    "1,64": "変更履歴",
+    "1,107": "艇種",
+    "1,111": "艇番",
+    "1,122": "データ更新",
+    "1,130": "メール送信",
+    "3,2": "展開+",
+    "3,10": "非表示-",
+    "3,55": "作業完了",
+    "3,59": "全件",
+    "4,10": "工場",
+    "4,13": "指令書期限",
+    "4,18": "(指令書期限)",
+    "4,23": "変更",
+    "4,25": "エンジン必要日",
+    "4,30": "(エンジン必要日)",
+    "4,35": "変更",
+    "4,37": "地区",
+    "4,40": "エンジン型式",
+    "4,55": "長期部材\r\n仕様確認",
+    "4,59": "長期部材\r\n社内展開",
+    "4,71": "エンジン仕様\r\n連絡期限",
+    "4,75": "長期部材\r\n連絡期日",
+    "4,85": "アフト\r\n操作部",
+    "4,88": "主機前\r\n装置",
+    "4,107": "長期部材\r\n設定済",
+    "4,111": "長期部材\r\n発注済",
+    "4,115": "長期部材\r\n設定",
+    "4,122": "No.",
+    "4,143": "仕様決定必要日",
+    "4,149": "前個数",
+    "5,115": "設定",
+    "5,133": 1,
+    "38,75": "※期限の1週間前にする",
+    "39,75": "　期限とんでもメール飛ぶように対応する",
+    "41,132": "データ更新",
+    "41,144": "データ更新",
+    "42,25": "kintone連携",
+    "42,45": "表示範囲",
+    "43,141": "チェック",
+    "43,147": "設定"
+  },
+  "Formulas": {
+    "43,45": "EDATE(AT3,-3)",
+    "5,71": "Z6-270",
+    "5,35": "IF(Z6<>AE6,\"有\",\"\")",
+    "5,23": "IF(N6<>S6,\"有\",\"\")",
+    "5,10": "LEFT(DC6,4)",
+    "5,118": "ODATA(\"投入計画_長期部材管理トランザクション明細/$count?$filter=艇種 eq \"&IF(ISBLANK(C6),\"null\",\"'\"&C6&\"'\")&\" and 艇番 eq \"&IF(ISBLANK(G6),\"null\",\"'\"&G6&\"'\"))",
+    "2,45": "TODAY()",
+    "5,143": "EV6-7",
+    "5,75": "Z6-180"
+  },
+  "AttachInfos": {
+    "1,23": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+            "TargetTableName": "V投入計画_受注側作業",
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "SubConditions": [
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "V投入計画_受注側作業",
+                    "ColumnName": "艇種",
+                    "GUID": "4450b800-550d-4fd2-80b5-5da4a73c3074"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=受注業務G作業管理!C3"
+                  }
+                },
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "V投入計画_受注側作業",
+                    "ColumnName": "艇番",
+                    "GUID": "cd1ca616-8dd6-42c0-93f4-012597be4c4d"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=受注業務G作業管理!G3"
+                  }
+                }
+              ]
+            },
+            "ID": "35f6ca63d3724544b449a87b79597e10"
+          }
+        ],
+        "Text": "検　索",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "1,35": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+            "TargetTableName": "V投入計画_受注側作業",
+            "ID": "ce87f185c07643c69dbd30b9377247f9"
+          },
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C3"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G3"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "クリア",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "1,53": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "データを更新しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー1",
+                    "UpdateType": 3
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": "データを更新しました！！"
+                  }
+                ],
+                "ID": "cba75d19-4aed-45f1-9072-0e453017c204"
+              }
+            ]
+          }
+        ],
+        "Text": "データ更新",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "1,64": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "データ変更履歴表示",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!DD3"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=データ変更履歴表示!B3"
+                }
+              },
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!DH3"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=データ変更履歴表示!F3"
+                }
+              },
+              {
+                "Source": "ポップアップ",
+                "TargetCell": {
+                  "SerializeProperty": "=データ変更履歴表示!B41"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "変更履歴",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "1,122": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "本当に実行してもよろしいですか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=受注業務G作業管理!DO6"
+                              }
+                            ]
+                          },
+                          "value": "0"
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                            "TableName": "V投入計画_受注側作業",
+                            "UpdateType": "add",
+                            "ShowConfirm": false,
+                            "UpdateBindingValues": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "艇種",
+                                  "GUID": "b504b02f-40bb-4e33-a3b6-bfeb450394d0"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!C6"
+                                }
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "艇番",
+                                  "GUID": "40230c06-6e3e-4000-8fa5-61a5f3b7227c"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!G6"
+                                }
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "ステータス",
+                                  "GUID": "7a58dc6f-b897-4212-a67d-91388267840d"
+                                },
+                                "Value": "未発注"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                            "LoopInfo": {
+                              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                              "ListviewName": "リストビュー2"
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                                "ListviewName": "リストビュー2",
+                                "UpdateValues": [
+                                  {
+                                    "Column": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!ET6"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!DQ7"
+                                    }
+                                  }
+                                ],
+                                "UpdateRowType": 3
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                            "ListviewName": "リストビュー2",
+                            "UpdateValues": [
+                              {
+                                "Column": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!ER6"
+                                },
+                                "Value": "0"
+                              }
+                            ],
+                            "UpdateRowType": 2
+                          }
+                        ],
+                        "ID": "21feb00b-c159-44b9-9db0-f96f190eb03f"
+                      },
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=受注業務G作業管理!DO6"
+                              }
+                            ]
+                          },
+                          "value": "0",
+                          "compareType": 1
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                            "ParameterName": "設定判定",
+                            "ParameterValue": "0",
+                            "ID": "4e70991ce75c4ef8acfd168134bb97ef"
+                          },
+                          {
+                            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                            "LoopInfo": {
+                              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                              "ListviewName": "リストビュー2"
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                                "ConditionAndCommandPairList": [
+                                  {
+                                    "Condition": {
+                                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                      "param": {
+                                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                        "cellLocations": [
+                                          {
+                                            "SerializeProperty": "=受注業務G作業管理!EH6"
+                                          }
+                                        ]
+                                      },
+                                      "value": {
+                                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                        "SerializeProperty": "=受注業務G作業管理!ET6"
+                                      },
+                                      "compareType": 1
+                                    },
+                                    "CommandList": [
+                                      {
+                                        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                                        "ListviewName": "リストビュー2",
+                                        "UpdateValues": [
+                                          {
+                                            "Column": {
+                                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                              "SerializeProperty": "=受注業務G作業管理!ER6"
+                                            },
+                                            "Value": "1"
+                                          }
+                                        ],
+                                        "UpdateRowType": 3
+                                      }
+                                    ],
+                                    "ID": "63382a25-277d-440c-8992-40b2b7f90648"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                            "LoopInfo": {
+                              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                              "ListviewName": "リストビュー2"
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                                "ConditionAndCommandPairList": [
+                                  {
+                                    "Condition": {
+                                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                      "param": {
+                                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                        "cellLocations": [
+                                          {
+                                            "SerializeProperty": "=受注業務G作業管理!DQ6"
+                                          }
+                                        ]
+                                      },
+                                      "value": "0"
+                                    },
+                                    "CommandList": [
+                                      {
+                                        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                        "ParameterName": "設定判定",
+                                        "ParameterValue": "1",
+                                        "ID": "1bd404c540804d7eb8cc4bb18aeaeaff"
+                                      },
+                                      {
+                                        "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                        "TableName": "V投入計画_受注側作業",
+                                        "ShowConfirm": false,
+                                        "UpdateBindingValues": [
+                                          {
+                                            "BindingInfo": {
+                                              "TableName": "V投入計画_受注側作業",
+                                              "ColumnName": "艇種",
+                                              "GUID": "3e804582-b908-4873-a720-af77ec3072ec"
+                                            },
+                                            "Value": {
+                                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                              "SerializeProperty": "=受注業務G作業管理!C6"
+                                            }
+                                          },
+                                          {
+                                            "BindingInfo": {
+                                              "TableName": "V投入計画_受注側作業",
+                                              "ColumnName": "艇番",
+                                              "GUID": "1dbf11f9-36bf-48ec-9ab2-b79dbb758bfc"
+                                            },
+                                            "Value": {
+                                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                              "SerializeProperty": "=受注業務G作業管理!G6"
+                                            }
+                                          },
+                                          {
+                                            "BindingInfo": {
+                                              "TableName": "V投入計画_受注側作業",
+                                              "ColumnName": "設定ステータス",
+                                              "GUID": "3258f39f-e009-49b0-939e-f289c97e58cc"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "$type": "Forguncy.Model.EndLoopCommand, ServerDesignerCommon",
+                                        "WithinLoop": true
+                                      }
+                                    ],
+                                    "ID": "ea309491-87c8-465c-adbc-c9692572a007"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                            "ConditionAndCommandPairList": [
+                              {
+                                "Condition": {
+                                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                                  "param": {
+                                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                    "cellLocations": [
+                                      {
+                                        "SerializeProperty": "=設定判定"
+                                      }
+                                    ]
+                                  },
+                                  "value": "0"
+                                },
+                                "CommandList": [
+                                  {
+                                    "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                    "TableName": "V投入計画_受注側作業",
+                                    "ShowConfirm": false,
+                                    "UpdateBindingValues": [
+                                      {
+                                        "BindingInfo": {
+                                          "TableName": "V投入計画_受注側作業",
+                                          "ColumnName": "艇種",
+                                          "GUID": "c79be468-d7fd-4608-9e37-229e559021d2"
+                                        },
+                                        "Value": {
+                                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                          "SerializeProperty": "=受注業務G作業管理!C6"
+                                        }
+                                      },
+                                      {
+                                        "BindingInfo": {
+                                          "TableName": "V投入計画_受注側作業",
+                                          "ColumnName": "艇番",
+                                          "GUID": "0171a6e3-5041-495e-99f1-803769073637"
+                                        },
+                                        "Value": {
+                                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                          "SerializeProperty": "=受注業務G作業管理!G6"
+                                        }
+                                      },
+                                      {
+                                        "BindingInfo": {
+                                          "TableName": "V投入計画_受注側作業",
+                                          "ColumnName": "設定ステータス",
+                                          "GUID": "9a0a1df7-e51a-49ef-ac30-100750861111"
+                                        },
+                                        "Value": "設定済"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                                    "ListviewName": "リストビュー1",
+                                    "UpdateType": 3
+                                  }
+                                ],
+                                "ID": "96560139-f9f8-4569-bfb5-0c6b6dc7f9c1"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "6b995f7a-0769-4b12-8456-2385d62f5429"
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                    "LoopInfo": {
+                      "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                      "ListviewName": "リストビュー2"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                        "ListviewName": "リストビュー2",
+                        "UpdateValues": [
+                          {
+                            "Column": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!ET6"
+                            },
+                            "Value": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!EH6"
+                            }
+                          }
+                        ],
+                        "UpdateRowType": 3
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー2",
+                    "UpdateType": 3
+                  }
+                ],
+                "ID": "3f58c11f-2631-45d4-b0bd-5da4703d05b0"
+              }
+            ]
+          }
+        ],
+        "Text": "データ更新",
+        "TemplateKey": "_RS_Normal_Style2",
+        "Icon": {
+          "Name": "Application/063_refresh_7.svg",
+          "BuiltIn": true,
+          "Color": "Background 1",
+          "UseCellTypeForeColor": true
+        }
+      }
+    },
+    "1,130": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "メールを送信しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "メール送信",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "艇種",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=受注業務G作業管理!DD3"
+                        }
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "艇番",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=受注業務G作業管理!DH3"
+                        }
+                      }
+                    ],
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  }
+                ],
+                "ID": "a876d34a-065e-435b-ba88-742b3acd7ce9"
+              }
+            ],
+            "Disabled": true
+          },
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "メール送信画面",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C6"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=メール送信画面!AG27"
+                }
+              },
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G6"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=メール送信画面!AK27"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "メール送信",
+        "TemplateKey": "_RS_Normal_Style2",
+        "Icon": {
+          "Name": "Application/119_mail_3.svg",
+          "BuiltIn": true,
+          "Color": "Background 1",
+          "UseCellTypeForeColor": true
+        }
+      }
+    },
+    "2,2": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "2,6": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "3,2": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "Location": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!K:AS"
+                },
+                "Value": true
+              }
+            ]
+          }
+        ],
+        "Text": "展開+",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "3,10": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.SetRowColumnLayoutCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "Location": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!K:AS"
+                },
+                "Value": false
+              }
+            ]
+          }
+        ],
+        "Text": "非表示-",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "3,59": {
+      "CellType": {
+        "$type": "Forguncy.RadioGroupCellType, ServerDesignerCommon",
+        "Style": 1,
+        "CellDefaultValue": "全件",
+        "Items": [
+          {
+            "Value": "未完了のみ",
+            "DisplayValue": "未完了のみ"
+          },
+          {
+            "Value": "全件",
+            "DisplayValue": "全件"
+          }
+        ],
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=受注業務G作業管理!BH4"
+                      }
+                    ]
+                  },
+                  "value": "未完了のみ"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+                    "TargetTableName": "V投入計画_受注側作業",
+                    "SqlCondition": {
+                      "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                      "SubConditions": [
+                        {
+                          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                          "SubConditions": [
+                            {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "CompareType": 1,
+                              "ColumnBindingInfo": {
+                                "TableName": "V投入計画_受注側作業",
+                                "ColumnName": "長納期部材仕様確認",
+                                "GUID": "bdd9436d-69b7-4af9-b942-5568fbf69bc3"
+                              },
+                              "Value": "完了"
+                            },
+                            {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "CompareType": 1,
+                              "ColumnBindingInfo": {
+                                "TableName": "V投入計画_受注側作業",
+                                "ColumnName": "長納期部材社内展開",
+                                "GUID": "ff209f5f-62e1-4054-a460-111939a94516"
+                              },
+                              "Value": "完了"
+                            },
+                            {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "CompareType": 1,
+                              "ColumnBindingInfo": {
+                                "TableName": "V投入計画_受注側作業",
+                                "ColumnName": "仕様確定",
+                                "GUID": "cd159fd1-da99-4324-b932-ac82f74f7c48"
+                              },
+                              "Value": "完了"
+                            },
+                            {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "CompareType": 1,
+                              "ColumnBindingInfo": {
+                                "TableName": "V投入計画_受注側作業",
+                                "ColumnName": "見積作成",
+                                "GUID": "affc58f9-c18e-4fbd-be79-ad9681e2df83"
+                              },
+                              "Value": "完了"
+                            }
+                          ],
+                          "RelationType": 1
+                        },
+                        {
+                          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                          "CompareType": 2,
+                          "ColumnBindingInfo": {
+                            "TableName": "V投入計画_受注側作業",
+                            "ColumnName": "大型小型個別_1",
+                            "GUID": "479f44c2-f71c-437a-8538-064d38500595"
+                          },
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=受注業務G作業管理!AT44"
+                          },
+                          "LeftBracket": 1,
+                          "RightBracket": 1
+                        }
+                      ]
+                    },
+                    "ID": "730c723275614d1fab73edca85d82bea"
+                  }
+                ],
+                "ID": "0a4d1ca1-1b13-4c53-8200-b4031dc562aa"
+              },
+              {
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+                    "TargetTableName": "V投入計画_受注側作業",
+                    "SqlCondition": {
+                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                      "CompareType": 2,
+                      "ColumnBindingInfo": {
+                        "TableName": "V投入計画_受注側作業",
+                        "ColumnName": "大型小型個別_1",
+                        "GUID": "61b898ef-f0c5-457a-8ebf-402facafda62"
+                      },
+                      "Value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=受注業務G作業管理!AT44"
+                      }
+                    },
+                    "ID": "33b3963aa3d443a29467f0339e080144"
+                  }
+                ],
+                "ID": "20c775a3-f9e1-4e1d-9f24-5c690949a0c8"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "3,120": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+            "ListviewName": "リストビュー2",
+            "UpdateValues": [
+              {
+                "Column": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!DQ6"
+                },
+                "Value": "1"
+              }
+            ],
+            "UpdateRowType": 2
+          }
+        ],
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "4,1": {
+      "ListViewInfo": {
+        "Name": "リストビュー1",
+        "TableName": "V投入計画_受注側作業",
+        "RowIndex": 4,
+        "ColumnIndex": 1,
+        "RowCount": 34,
+        "ColumnCount": 118,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_受注側作業",
+                "ColumnName": "大型小型個別_1",
+                "GUID": "a5c4cc66-daf1-4c23-acb6-5a2805c4c26a"
+              },
+              "Order": 0
+            }
+          ]
+        },
+        "TopCondition": {
+          "$type": "ForguncyDataAccess.TopCESqlCondition, ForguncyDataAccess",
+          "TopCount": 100
+        },
+        "TableLoadOnDemandInfo": {
+          "IsEnabled": true
+        },
+        "ListViewStyleName": "_RS_Medium2",
+        "CurrentRowChangedCommandList": [
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!DD3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C6"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!DH3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G6"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C6"
+                }
+              },
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G3"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G6"
+                }
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+            "TargetTableName": "投入計画_長期部材管理トランザクション明細",
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "SubConditions": [
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "投入計画_長期部材管理トランザクション明細",
+                    "ColumnName": "艇種",
+                    "GUID": "7b161a4e-804f-4ec8-99e5-335e05c4b2f8"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=受注業務G作業管理!C6"
+                  }
+                },
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "投入計画_長期部材管理トランザクション明細",
+                    "ColumnName": "艇番",
+                    "GUID": "751f2244-dcda-41d8-af2d-6fcecd513818"
+                  },
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=受注業務G作業管理!G6"
+                  }
+                }
+              ]
+            },
+            "ID": "5cf4aab23a554e09bfa417e4958fb4e4"
+          },
+          {
+            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+            "LoopInfo": {
+              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+              "ListviewName": "リストビュー2"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                "ListviewName": "リストビュー2",
+                "UpdateValues": [
+                  {
+                    "Column": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=受注業務G作業管理!ET6"
+                    },
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=受注業務G作業管理!EH6"
+                    }
+                  }
+                ],
+                "UpdateRowType": 3
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+            "ListviewName": "リストビュー2",
+            "UpdateType": 3
+          }
+        ],
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "ColumnOperation": 2,
+        "FrozenIndex": 11,
+        "CommitType": 1
+      }
+    },
+    "4,120": {
+      "ListViewInfo": {
+        "Name": "リストビュー2",
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "RowIndex": 4,
+        "ColumnIndex": 120,
+        "RowCount": 34,
+        "ColumnCount": 53,
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "SubConditions": [
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "投入計画_長期部材管理トランザクション明細",
+                "ColumnName": "艇種",
+                "GUID": "853138a5-ce3b-4699-9323-a5637cd8d540"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=受注業務G作業管理!C6"
+              }
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "投入計画_長期部材管理トランザクション明細",
+                "ColumnName": "艇番",
+                "GUID": "f3a74b69-71c0-4b6d-a8df-c61be4f34ebd"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=受注業務G作業管理!G6"
+              }
+            }
+          ]
+        },
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_ExcelTableStyle",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "RowHeaderContextMenu": {
+          "ContextMenuItems": [
+            {
+              "Text": "挿入",
+              "OperationType": 2
+            },
+            {
+              "Text": "削除",
+              "Visible": true,
+              "OperationType": 3
+            },
+            {
+              "Text": "複製",
+              "OperationType": 4
+            }
+          ]
+        },
+        "ColumnOperation": 2,
+        "CommitType": 1
+      }
+    },
+    "5,2": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "艇種",
+        "GUID": "05c8aba7-9c52-46a3-ac18-3137bdcade8e"
+      }
+    },
+    "5,6": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "艇番",
+        "GUID": "c4e309ba-3358-4cf3-80a0-ef28913278e8"
+      }
+    },
+    "5,13": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "大型小型個別_1",
+        "GUID": "85a0ed77-8096-4a0b-a905-8a7cec6b8f3b"
+      }
+    },
+    "5,18": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "大型小型個別_2",
+        "GUID": "45b2cc03-a36d-4716-aa2e-df4e36536b2f"
+      }
+    },
+    "5,23": {
+      "RulesGuidList": [
+        "72f73660-7a41-40c2-9a91-588924f19475"
+      ]
+    },
+    "5,25": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "エンジン必要日_1",
+        "GUID": "64d388ff-9922-4921-864a-bcc3b962715d"
+      }
+    },
+    "5,30": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "エンジン必要日_2",
+        "GUID": "2d90c67c-9cc5-4acf-a6b7-aa63ee8d5ef5"
+      }
+    },
+    "5,35": {
+      "RulesGuidList": [
+        "8511f04c-04ea-4a42-8f23-80fae93627b8"
+      ]
+    },
+    "5,37": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "担当_1",
+        "GUID": "fe7a6c41-ee58-43f1-80ea-cc69f1acba22"
+      }
+    },
+    "5,40": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "エンジン_1",
+        "GUID": "eb30c574-d9c1-4f6b-8b53-f327f94331a4"
+      }
+    },
+    "5,45": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "拠点",
+        "GUID": "c45db0cd-3986-4d12-8a2b-352ee786522b"
+      }
+    },
+    "5,48": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "YMS担当者",
+        "GUID": "66d42a32-3bfc-45c4-a581-356ddb0488a5"
+      }
+    },
+    "5,52": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "YMIA担当者",
+        "GUID": "c4834d2d-fb5d-4ccd-9e5f-27ef174b4be5"
+      }
+    },
+    "5,55": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "長納期部材仕様確認",
+        "GUID": "4057a511-d32c-4ed8-8896-eeb2e4fbd2cf"
+      },
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "未対応",
+            "DisplayValue": "未対応"
+          },
+          {
+            "Value": "対応中",
+            "DisplayValue": "対応中"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ]
+      },
+      "RulesGuidList": [
+        "e3a64bb4-ee28-4c0a-81dd-71c82aa83449",
+        "caa6cb4f-5583-4f4e-a6ab-cd4e24e2bda3",
+        "74ee3400-7e68-4b7d-a02f-ca5d106b181a"
+      ]
+    },
+    "5,59": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "長納期部材社内展開",
+        "GUID": "98f10e28-bfbb-42da-b399-68e7340fa600"
+      },
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "未対応",
+            "DisplayValue": "未対応"
+          },
+          {
+            "Value": "対応中",
+            "DisplayValue": "対応中"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ]
+      },
+      "RulesGuidList": [
+        "caa6cb4f-5583-4f4e-a6ab-cd4e24e2bda3",
+        "74ee3400-7e68-4b7d-a02f-ca5d106b181a",
+        "e3a64bb4-ee28-4c0a-81dd-71c82aa83449"
+      ]
+    },
+    "5,63": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "仕様確定",
+        "GUID": "0e316002-8361-4d0d-9194-f8e87a056163"
+      },
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "未対応",
+            "DisplayValue": "未対応"
+          },
+          {
+            "Value": "対応中",
+            "DisplayValue": "対応中"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ]
+      },
+      "RulesGuidList": [
+        "caa6cb4f-5583-4f4e-a6ab-cd4e24e2bda3",
+        "74ee3400-7e68-4b7d-a02f-ca5d106b181a",
+        "e3a64bb4-ee28-4c0a-81dd-71c82aa83449"
+      ]
+    },
+    "5,67": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "見積作成",
+        "GUID": "74c5799e-ff14-4e16-a1fd-db634fdabef8"
+      },
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "Items": [
+          {
+            "Value": "",
+            "DisplayValue": ""
+          },
+          {
+            "Value": "未対応",
+            "DisplayValue": "未対応"
+          },
+          {
+            "Value": "対応中",
+            "DisplayValue": "対応中"
+          },
+          {
+            "Value": "完了",
+            "DisplayValue": "完了"
+          }
+        ]
+      },
+      "RulesGuidList": [
+        "caa6cb4f-5583-4f4e-a6ab-cd4e24e2bda3",
+        "74ee3400-7e68-4b7d-a02f-ca5d106b181a",
+        "e3a64bb4-ee28-4c0a-81dd-71c82aa83449"
+      ]
+    },
+    "5,71": {
+      "RulesGuidList": [
+        "335010e8-7d5a-443b-abc3-4e078fd04f2b"
+      ]
+    },
+    "5,75": {
+      "RulesGuidList": [
+        "a31bc528-bf67-49be-bc7c-9addf70788f3"
+      ]
+    },
+    "5,79": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "エアコン",
+        "GUID": "b33b7934-1500-4b42-a421-6d0f3e530797"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,82": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "充電器",
+        "GUID": "b2b4a839-bdbd-43af-b2a1-7a21a5e02880"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,85": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "アフト操作部",
+        "GUID": "80a4258a-b154-4eda-b4b1-ac06402ba039"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,88": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "主機前装置",
+        "GUID": "aea3abf4-cd91-4a90-8c83-f51b0044b9b8"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,91": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "スラスター",
+        "GUID": "aa78a993-aafd-4fb0-9a2b-38c0dad67112"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,94": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "補機",
+        "GUID": "310303be-fea3-4342-9c31-29fd3eb7d31d"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,97": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "ジャイロ",
+        "GUID": "6b9998da-1900-448d-baaa-6af4f00f0b97"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,100": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "温水器",
+        "GUID": "717ccf39-b4c9-4f35-94c2-4eff2cec98d0"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,103": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "ギャレー",
+        "GUID": "8ab02ebf-4372-4056-b2c2-ec413c331219"
+      },
+      "RulesGuidList": [
+        "36378a50-3a89-4a6e-8964-cb78b16aacab",
+        "42d81fdf-62f2-4726-90da-f031003d7d91"
+      ]
+    },
+    "5,106": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "製造ライン名_1",
+        "GUID": "23673ac7-451a-42b4-a981-f8d5f10a7337"
+      }
+    },
+    "5,107": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "設定ステータス",
+        "GUID": "448151b6-f185-4e24-8dec-8c62499dda8b"
+      }
+    },
+    "5,111": {
+      "BindingInfo": {
+        "TableName": "V投入計画_受注側作業",
+        "ColumnName": "ステータス",
+        "GUID": "f7aa0785-dca3-468f-8290-49645a8781c1"
+      },
+      "RulesGuidList": [
+        "0c18639e-c35b-44a0-91fb-b937c71d0ab4",
+        "0ce999cc-15a2-4763-b7ed-9c3033aff019"
+      ]
+    },
+    "5,115": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "ClosePopupCallbackCommand": {
+              "Commands": [
+                {
+                  "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                  "ListviewName": "リストビュー1",
+                  "UpdateType": 6,
+                  "UpdateListviewCommandRunTimeMethodSetting": {
+                    "MethodName": "Reload",
+                    "ParameterValues": {
+                      "clearFilter": false,
+                      "clearSort": false,
+                      "clearRuntimeQueryConditions": false
+                    }
+                  }
+                },
+                {
+                  "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                  "ListviewName": "リストビュー2",
+                  "UpdateType": 6,
+                  "UpdateListviewCommandRunTimeMethodSetting": {
+                    "MethodName": "Reload",
+                    "ParameterValues": {
+                      "clearFilter": false,
+                      "clearSort": false,
+                      "clearRuntimeQueryConditions": false
+                    }
+                  }
+                }
+              ],
+              "ParamProperties": {
+                "IsOK": "ポップアップのステータスコード"
+              }
+            },
+            "PageName": "長期部材設定画面",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!C6"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=長期部材設定画面!F5"
+                }
+              },
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!G6"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=長期部材設定画面!O5"
+                }
+              },
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=受注業務G作業管理!ET6"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=長期部材設定画面!BO11"
+                }
+              }
+            ],
+            "DeleteCachedQuery": true
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=受注業務G作業管理!DO6"
+                      }
+                    ]
+                  },
+                  "value": "0"
+                },
+                "CommandList": [],
+                "ID": "29d67b02-4554-4c82-bdcd-d6c580ca094c"
+              }
+            ],
+            "Disabled": true
+          }
+        ],
+        "Text": "設定",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "5,120": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "設定済フラグ",
+        "GUID": "72dde48a-0266-4f8f-9e3c-f2c54c15951c"
+      },
+      "CellType": {
+        "$type": "Forguncy.CheckBoxCellType, ServerDesignerCommon",
+        "ShowOnlyEdit": false
+      }
+    },
+    "5,122": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "明細番号",
+        "GUID": "defbd409-07f6-41a9-b51b-5524052365c2"
+      },
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ]
+      },
+      "DataValidationInfo": {
+        "IgnoreBlank": false
+      },
+      "RulesGuidList": [
+        "f52f0708-172b-4684-bc2c-9b0347fd64f7"
+      ]
+    },
+    "5,124": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "品番",
+        "GUID": "717e83c5-c5ec-4b0a-b59c-1fec274bdd9a"
+      },
+      "RulesGuidList": [
+        "f52f0708-172b-4684-bc2c-9b0347fd64f7"
+      ]
+    },
+    "5,128": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "品名",
+        "GUID": "f915708b-c75d-4f12-a9b9-b82708d24a90"
+      },
+      "RulesGuidList": [
+        "f52f0708-172b-4684-bc2c-9b0347fd64f7"
+      ]
+    },
+    "5,133": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "支給区分",
+        "GUID": "754518a8-98d1-45a4-9bd0-4c1207652267"
+      },
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "Items": [
+          {
+            "Value": "2",
+            "DisplayValue": "支給"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "手配"
+          }
+        ],
+        "CellDefaultValue": 1
+      },
+      "RulesGuidList": [
+        "f52f0708-172b-4684-bc2c-9b0347fd64f7"
+      ]
+    },
+    "5,137": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "個数",
+        "GUID": "7fc7e19e-4733-4b16-9c1d-09ae6c1d4b13"
+      },
+      "RulesGuidList": [
+        "f52f0708-172b-4684-bc2c-9b0347fd64f7"
+      ]
+    },
+    "5,139": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "FGC_LastModifyDate",
+        "GUID": "095419d6-12a0-428e-b3f8-14d77f2e0236"
+      }
+    },
+    "5,143": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "仕様決定必要日",
+        "GUID": "0f66169c-5515-4df4-aee1-6c2b419efbd6"
+      }
+    },
+    "5,147": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "変更フラグ",
+        "GUID": "4d1ab04e-1dd2-4499-b496-6852cea76e7e"
+      }
+    },
+    "5,149": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "前個数",
+        "GUID": "b8adcce2-a9d5-4974-b749-463ccb29ee73"
+      },
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ]
+      },
+      "DataValidationInfo": {}
+    },
+    "5,151": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "発注期限",
+        "GUID": "f4b48a9d-53a2-47f0-a748-f485f2b7b91a"
+      }
+    },
+    "5,153": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "艇種",
+        "GUID": "ddd94422-ce46-47e6-9ee8-c05ba8ae0635"
+      }
+    },
+    "5,155": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "艇番",
+        "GUID": "5226c773-b8b6-4a27-ac1b-f923991d7759"
+      }
+    },
+    "5,157": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "明細番号",
+        "GUID": "55d9aad5-8cf1-4b59-a11a-1f970fe9f089"
+      }
+    },
+    "5,159": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "仕組コード",
+        "GUID": "abde4460-ea62-4ad7-884d-36813741a124"
+      }
+    },
+    "5,161": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "備考",
+        "GUID": "96f4832c-b9c0-49d0-9125-fe24a41acb0c"
+      }
+    },
+    "5,163": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "発注期限ベース種類",
+        "GUID": "ee850f16-60f3-49c2-8601-737f5eab540f"
+      }
+    },
+    "5,165": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "ColumnName": "希望納期ベース種類",
+        "GUID": "705167b3-c64c-4b2e-a902-e7dae242aba0"
+      }
+    },
+    "40,139": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+            "ServerCommandName": "締切間近メール",
+            "RefreshAfterFinish": true,
+            "CheckDataValidation": true
+          }
+        ],
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "41,106": {
+      "ListViewInfo": {
+        "Name": "リストビュー3",
+        "TableName": "投入計画_長期部材管理マスタ",
+        "RowIndex": 41,
+        "ColumnIndex": 106,
+        "RowCount": 3,
+        "ColumnCount": 26,
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Medium2",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "ColumnOperation": 2
+      }
+    },
+    "41,132": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "本当に実行してもよろしいですか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー2",
+                    "UpdateType": 3,
+                    "Disabled": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                    "LoopInfo": {
+                      "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                      "ListviewName": "リストビュー2"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                        "ConditionAndCommandPairList": [
+                          {
+                            "Condition": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                "cellLocations": [
+                                  {
+                                    "SerializeProperty": "=受注業務G作業管理!EH6"
+                                  }
+                                ]
+                              },
+                              "value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=受注業務G作業管理!ET6"
+                              },
+                              "compareType": 1
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                                "ListviewName": "リストビュー2",
+                                "UpdateValues": [
+                                  {
+                                    "Column": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!ER6"
+                                    },
+                                    "Value": "1"
+                                  }
+                                ],
+                                "UpdateRowType": 3
+                              }
+                            ],
+                            "ID": "89c7274a-2390-4d1e-a71e-d11d00928945"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                    "ParameterName": "設定判定",
+                    "ParameterValue": "0",
+                    "ID": "2c6c5dd7fe274a368ae63bda62234c8d"
+                  },
+                  {
+                    "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                    "LoopInfo": {
+                      "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                      "ListviewName": "リストビュー2"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                        "ConditionAndCommandPairList": [
+                          {
+                            "Condition": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                "cellLocations": [
+                                  {
+                                    "SerializeProperty": "=受注業務G作業管理!DQ6"
+                                  }
+                                ]
+                              },
+                              "value": "0"
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                                "MessageFormula": "uwaa\r\n",
+                                "Disabled": true
+                              },
+                              {
+                                "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                                "ParameterName": "設定判定",
+                                "ParameterValue": "1",
+                                "ID": "a64afd6ccbff4065b45efddfab086f43"
+                              },
+                              {
+                                "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                                "TableName": "V投入計画_受注側作業",
+                                "ShowConfirm": false,
+                                "RowsToUpdate": 1,
+                                "RowsToUpdateCondition": {
+                                  "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                                  "SubConditions": [
+                                    {
+                                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                      "ColumnBindingInfo": {
+                                        "TableName": "V投入計画_受注側作業",
+                                        "ColumnName": "艇種",
+                                        "GUID": "39520de9-9c7d-4092-968e-761cf28add95"
+                                      },
+                                      "Value": {
+                                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                        "SerializeProperty": "=受注業務G作業管理!C6"
+                                      }
+                                    },
+                                    {
+                                      "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                      "ColumnBindingInfo": {
+                                        "TableName": "V投入計画_受注側作業",
+                                        "ColumnName": "艇番",
+                                        "GUID": "e7a82a31-d09d-405f-9873-85c87f8c2ff9"
+                                      },
+                                      "Value": {
+                                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                        "SerializeProperty": "=受注業務G作業管理!G6"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "UpdateBindingValues": [
+                                  {
+                                    "BindingInfo": {
+                                      "TableName": "V投入計画_受注側作業",
+                                      "ColumnName": "艇種",
+                                      "GUID": "b869dc4e-7d03-426b-991f-b8a4b213131e"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!C6"
+                                    }
+                                  },
+                                  {
+                                    "BindingInfo": {
+                                      "TableName": "V投入計画_受注側作業",
+                                      "ColumnName": "艇番",
+                                      "GUID": "63f70109-fb65-4de0-8796-703ecb298967"
+                                    },
+                                    "Value": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!G6"
+                                    }
+                                  },
+                                  {
+                                    "BindingInfo": {
+                                      "TableName": "V投入計画_受注側作業",
+                                      "ColumnName": "設定ステータス",
+                                      "GUID": "52fa9abc-bc33-4afd-9854-07c9c9e4e98d"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "$type": "Forguncy.Model.EndLoopCommand, ServerDesignerCommon",
+                                "WithinLoop": true
+                              }
+                            ],
+                            "ID": "64a85638-ce3a-4ff6-8305-268f8906d3e7"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=設定判定"
+                              }
+                            ]
+                          },
+                          "value": "0"
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+                            "TableName": "V投入計画_受注側作業",
+                            "ShowConfirm": false,
+                            "RowsToUpdate": 1,
+                            "RowsToUpdateCondition": {
+                              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                              "SubConditions": [
+                                {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "V投入計画_受注側作業",
+                                    "ColumnName": "艇種",
+                                    "GUID": "224e1116-9b0d-4855-a15d-45209aa57b29"
+                                  },
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=受注業務G作業管理!C6"
+                                  }
+                                },
+                                {
+                                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                                  "ColumnBindingInfo": {
+                                    "TableName": "V投入計画_受注側作業",
+                                    "ColumnName": "艇番",
+                                    "GUID": "7d4d7ffc-74f0-46c3-962a-705c160bf5f5"
+                                  },
+                                  "Value": {
+                                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                    "SerializeProperty": "=受注業務G作業管理!G6"
+                                  }
+                                }
+                              ]
+                            },
+                            "UpdateBindingValues": [
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "艇種",
+                                  "GUID": "c697c4f3-cc2d-4e31-88cb-4de3aa6d7747"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!C6"
+                                }
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "艇番",
+                                  "GUID": "067e34d2-2bb9-44f8-865f-2d262244ec29"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!G6"
+                                }
+                              },
+                              {
+                                "BindingInfo": {
+                                  "TableName": "V投入計画_受注側作業",
+                                  "ColumnName": "設定ステータス",
+                                  "GUID": "e4b8aa14-54fb-43bb-bd27-525072955230"
+                                },
+                                "Value": "設定済"
+                              }
+                            ]
+                          },
+                          {
+                            "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                            "MessageFormula": "とりや\r\n",
+                            "Disabled": true
+                          }
+                        ],
+                        "ID": "eca7b52f-9f36-4719-b717-9b1ee7c6a09f"
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー2",
+                    "UpdateType": 3
+                  }
+                ],
+                "ID": "82eee658-79fd-4c2b-a315-fd193370ed49"
+              }
+            ]
+          }
+        ],
+        "Text": "データ更新",
+        "TemplateKey": "_RS_Normal_Style2",
+        "Icon": {
+          "Name": "Application/063_refresh_7.svg",
+          "BuiltIn": true,
+          "Color": "Background 1",
+          "UseCellTypeForeColor": true
+        }
+      }
+    },
+    "41,144": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "データを更新しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー2",
+                    "UpdateValues": [
+                      {
+                        "Column": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=受注業務G作業管理!ET6"
+                        },
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=受注業務G作業管理!ET6"
+                        }
+                      }
+                    ],
+                    "UpdateRowType": 3,
+                    "Disabled": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+                    "LoopInfo": {
+                      "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+                      "ListviewName": "リストビュー2"
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                        "ConditionAndCommandPairList": [
+                          {
+                            "Condition": {
+                              "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                              "param": {
+                                "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                                "cellLocations": [
+                                  {
+                                    "SerializeProperty": "=受注業務G作業管理!EH6"
+                                  }
+                                ]
+                              },
+                              "value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=受注業務G作業管理!ET6"
+                              },
+                              "compareType": 1
+                            },
+                            "CommandList": [
+                              {
+                                "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                                "ListviewName": "リストビュー2",
+                                "UpdateValues": [
+                                  {
+                                    "Column": {
+                                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                      "SerializeProperty": "=受注業務G作業管理!ER6"
+                                    },
+                                    "Value": "1"
+                                  }
+                                ],
+                                "UpdateRowType": 3
+                              }
+                            ],
+                            "ID": "64abccc0-e168-4043-b5cd-c29b6512670d"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                    "ListviewName": "リストビュー2",
+                    "UpdateType": 3
+                  }
+                ],
+                "ID": "f0b1cac4-88c0-433f-a436-f5fe564629bc"
+              }
+            ]
+          }
+        ],
+        "Text": "データ更新",
+        "TemplateKey": "_RS_Normal_Style2",
+        "Icon": {
+          "Name": "Application/063_refresh_7.svg",
+          "BuiltIn": true,
+          "Color": "Background 1",
+          "UseCellTypeForeColor": true
+        }
+      }
+    },
+    "41,152": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "本当に実行してもよろしいですか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=受注業務G作業管理!DO6"
+                              }
+                            ]
+                          },
+                          "value": "0"
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+                            "TargetTableName": "投入計画_長期部材管理マスタ",
+                            "SqlCondition": {
+                              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                              "ColumnBindingInfo": {
+                                "TableName": "投入計画_長期部材管理マスタ",
+                                "ColumnName": "艇種",
+                                "GUID": "468682e7-3571-47e7-820a-1bde3ebeb007"
+                              },
+                              "Value": {
+                                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                "SerializeProperty": "=受注業務G作業管理!C6"
+                              }
+                            },
+                            "ID": "80725d1271334990b49a29049d6a44b2"
+                          },
+                          {
+                            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                            "ListviewName": "リストビュー2",
+                            "UpdateType": 2,
+                            "UpdateRowType": 2
+                          },
+                          {
+                            "$type": "PassListviewDataCommand.PassListviewDataCommand, PassListviewDataCommand",
+                            "PassValueItems": [
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DC43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!EX6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DE43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DS6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DG43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FD6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DI43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DU6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DK43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DY6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DM43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FF6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DO43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!EH6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DQ43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FH6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DS43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FL6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DU43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FJ6"
+                                }
+                              },
+                              {
+                                "SourceCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!DW43"
+                                },
+                                "TargetCell": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!FN6"
+                                }
+                              }
+                            ],
+                            "Source": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!DC44"
+                            },
+                            "Target": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!DQ7"
+                            }
+                          },
+                          {
+                            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                            "ListviewName": "リストビュー2",
+                            "UpdateValues": [
+                              {
+                                "Column": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!EZ6"
+                                },
+                                "Value": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=受注業務G作業管理!G6"
+                                }
+                              }
+                            ],
+                            "UpdateRowType": 2
+                          }
+                        ],
+                        "ID": "afe6650d-9514-407b-8d42-c457f633402f"
+                      },
+                      {
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                            "MessageFormula": "こちらの艇種・艇番は既にマスタ取込を完了しています。"
+                          }
+                        ],
+                        "ID": "debc6ad2-d7d3-4db8-9a9a-f8e2ead3e06e"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "f61ebdb0-0aa6-41d5-ad35-bbd6c8da14ce"
+              }
+            ]
+          }
+        ],
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "42,25": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "kintoneにデータを連携しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "kintone2SQLServer",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "updateSQLServer",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "SQLServer2kintone",
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": "kintoneにデータを連携しました！"
+                  }
+                ],
+                "ID": "a15f831c-6f1e-4ec4-ac04-5c5cecf754cc"
+              }
+            ]
+          }
+        ],
+        "Text": "kintone連携",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "42,106": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "艇種",
+        "GUID": "cb637fc8-43d8-4460-9585-9bc41730d237"
+      }
+    },
+    "42,108": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "明細番号",
+        "GUID": "a8a5ac92-94c6-4548-ab5d-ec4d0e1962f9"
+      }
+    },
+    "42,110": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "仕組コード",
+        "GUID": "2be6b5a1-dd17-4f0e-ba01-d0cb8a56cadf"
+      }
+    },
+    "42,112": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "品番",
+        "GUID": "8d57046c-71d5-492c-a376-aaa79dea95b8"
+      }
+    },
+    "42,114": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "品名",
+        "GUID": "a859f180-729f-401d-abe8-dcabf5641ed8"
+      }
+    },
+    "42,116": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "備考",
+        "GUID": "3eb4b832-5b41-4a25-8e1d-65c255e7ef59"
+      }
+    },
+    "42,118": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "個数",
+        "GUID": "82d4ad46-d548-4ae0-84bc-327b9cc068de"
+      }
+    },
+    "42,120": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "発注期限ベース種類",
+        "GUID": "6b3404e0-0295-42a5-9de2-05d3b6ed7884"
+      }
+    },
+    "42,122": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "発注期限日数",
+        "GUID": "1e151ed1-3bcb-4829-b328-391beb9f39c9"
+      }
+    },
+    "42,124": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "希望納期ベース種類",
+        "GUID": "75c53a88-8c6e-4dce-bae5-73f3cd42f4cf"
+      }
+    },
+    "42,126": {
+      "BindingInfo": {
+        "TableName": "投入計画_長期部材管理マスタ",
+        "ColumnName": "希望納期日数",
+        "GUID": "9a13dcb5-cec3-4265-a0b2-31fc5bfd9e8d"
+      }
+    },
+    "43,141": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+            "LoopInfo": {
+              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+              "ListviewName": "リストビュー2"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                "ConditionAndCommandPairList": [
+                  {
+                    "Condition": {
+                      "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                      "param": {
+                        "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                        "cellLocations": [
+                          {
+                            "SerializeProperty": "=受注業務G作業管理!EH6"
+                          }
+                        ]
+                      },
+                      "value": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=受注業務G作業管理!ET6"
+                      },
+                      "compareType": 1
+                    },
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                        "ListviewName": "リストビュー2",
+                        "UpdateValues": [
+                          {
+                            "Column": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!ER6"
+                            },
+                            "Value": "1"
+                          }
+                        ],
+                        "UpdateRowType": 3
+                      }
+                    ],
+                    "ID": "74f6a6b0-e7f4-4962-8c2a-96b9182c3ab5"
+                  },
+                  {
+                    "CommandList": [
+                      {
+                        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                        "ListviewName": "リストビュー2",
+                        "UpdateValues": [
+                          {
+                            "Column": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=受注業務G作業管理!ER6"
+                            },
+                            "Value": "0"
+                          }
+                        ],
+                        "UpdateRowType": 3
+                      }
+                    ],
+                    "ID": "731eef0d-c57e-4e24-b6d6-d9908af11e4d"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Text": "チェック",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "43,147": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+            "LoopInfo": {
+              "$type": "Forguncy.Model.ListviewKindLoopInfo, ServerDesignerCommon",
+              "ListviewName": "リストビュー2"
+            },
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+                "ListviewName": "リストビュー2",
+                "UpdateValues": [
+                  {
+                    "Column": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=受注業務G作業管理!ET6"
+                    },
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=受注業務G作業管理!EH6"
+                    }
+                  }
+                ],
+                "UpdateRowType": 3
+              }
+            ]
+          }
+        ],
+        "Text": "設定",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 0,
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 18.666666666666664
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 18.666666666666664,
+        "Formatter": 3
+      },
+      {
+        "WordWrap": true
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 3
+      },
+      {
+        "Background": 4,
+        "FontFamily": 1,
+        "Foreground": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 16.0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
+        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 7,
+        "HorizontalAlignment": 8,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 16.0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 9,
+        "Foreground": 5,
+        "HorizontalAlignment": 10
+      },
+      {
+        "Background": 9,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "Background": 0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "HorizontalAlignment": 10,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "Background": 11
+      },
+      {
+        "FontSize": 13.333333333333332
+      },
+      {
+        "Background": 12,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "Background": 12,
+        "FontFamily": 1,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "Background": 13,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "Background": 13,
+        "FontSize": 13.333333333333332,
+        "WordWrap": true
+      },
+      {
+        "Background": 14,
+        "FontSize": 13.333333333333332,
+        "WordWrap": true
+      },
+      {
+        "Background": 13,
+        "FontSize": 13.333333333333332,
+        "WordWrap": true,
+        "ShrinkToFit": true
+      },
+      {
+        "Background": 13,
+        "FontSize": 13.333333333333332,
+        "WordWrap": true,
+        "ShrinkToFit": false
+      },
+      {
+        "Background": 15,
+        "FontFamily": 1,
+        "FontSize": 12.0,
+        "Foreground": 16,
+        "WordWrap": false,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0,
+        "ShrinkToFit": true
+      },
+      {
+        "FontFamily": 1,
+        "WordWrap": true,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Formatter": 7,
+        "HorizontalAlignment": 8
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Formatter": 7
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "HorizontalAlignment": 10
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "ShrinkToFit": true
+      },
+      {
+        "FontSize": 13.333333333333332,
+        "Formatter": 17,
+        "HorizontalAlignment": 8
+      },
+      {
+        "HorizontalAlignment": 10,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 6,
+        "HorizontalAlignment": 8,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 8,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 18,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0,
+        "ShrinkToFit": true
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 18,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "HorizontalAlignment": 8
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 6,
+        "HorizontalAlignment": 8
+      },
+      {
+        "Formatter": 18
+      },
+      {
+        "FontFamily": 1,
+        "FontSize": 16.0,
+        "Formatter": 3
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Accent 1 80",
+        "Body",
+        "black",
+        "[AUTO]General",
+        "#FFC00000",
+        "Background 1 0",
+        "@",
+        "yyyy/m/d",
+        "Right",
+        "Accent 2 -25",
+        "Center",
+        "#FFFFFF00",
+        "Accent 2 -50",
+        "Accent 1 -50",
+        "Accent 5 -25",
+        "Accent 1 60",
+        "Text 1 0",
+        "yy/m/d",
+        "yyyy/MM/dd"
+      ],
+      "Borders": [
+        {
+          "Color": 2
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,2": 0,
+      "1,3": 1,
+      "1,4": 1,
+      "1,5": 1,
+      "1,6": 2,
+      "1,7": 3,
+      "1,8": 3,
+      "1,9": 4,
+      "1,10": 5,
+      "1,11": 5,
+      "1,12": 5,
+      "1,13": 5,
+      "1,14": 5,
+      "1,23": 6,
+      "1,24": 5,
+      "1,25": 5,
+      "1,26": 5,
+      "1,27": 5,
+      "1,28": 5,
+      "1,29": 5,
+      "1,35": 7,
+      "1,36": 5,
+      "1,37": 5,
+      "1,38": 5,
+      "1,39": 5,
+      "1,45": 0,
+      "1,46": 1,
+      "1,47": 1,
+      "1,48": 1,
+      "1,49": 1,
+      "1,52": 8,
+      "1,53": 5,
+      "1,54": 5,
+      "1,55": 5,
+      "1,56": 5,
+      "1,57": 5,
+      "1,58": 5,
+      "1,64": 9,
+      "1,65": 5,
+      "1,66": 5,
+      "1,67": 5,
+      "1,68": 5,
+      "1,69": 5,
+      "1,107": 10,
+      "1,108": 11,
+      "1,109": 11,
+      "1,110": 11,
+      "1,111": 10,
+      "1,112": 11,
+      "1,113": 11,
+      "1,114": 11,
+      "1,122": 5,
+      "1,123": 5,
+      "1,124": 5,
+      "1,125": 5,
+      "1,126": 5,
+      "1,127": 5,
+      "1,130": 12,
+      "1,148": 9,
+      "1,149": 9,
+      "1,150": 9,
+      "1,151": 9,
+      "1,152": 9,
+      "1,153": 9,
+      "1,154": 9,
+      "1,155": 9,
+      "1,156": 9,
+      "1,157": 9,
+      "1,158": 9,
+      "1,159": 9,
+      "1,160": 9,
+      "1,161": 9,
+      "1,162": 9,
+      "1,163": 9,
+      "1,164": 9,
+      "1,165": 9,
+      "1,166": 9,
+      "1,167": 9,
+      "1,168": 9,
+      "1,169": 9,
+      "1,170": 9,
+      "1,171": 9,
+      "1,172": 9,
+      "1,173": 9,
+      "2,2": 13,
+      "2,3": 3,
+      "2,4": 3,
+      "2,5": 4,
+      "2,6": 13,
+      "2,7": 14,
+      "2,8": 14,
+      "2,9": 15,
+      "2,10": 5,
+      "2,11": 5,
+      "2,12": 5,
+      "2,13": 5,
+      "2,14": 5,
+      "2,23": 5,
+      "2,24": 5,
+      "2,25": 5,
+      "2,26": 5,
+      "2,27": 5,
+      "2,28": 5,
+      "2,29": 5,
+      "2,35": 5,
+      "2,36": 5,
+      "2,37": 5,
+      "2,38": 5,
+      "2,39": 5,
+      "2,45": 16,
+      "2,46": 1,
+      "2,47": 1,
+      "2,48": 1,
+      "2,49": 1,
+      "2,53": 5,
+      "2,54": 5,
+      "2,55": 5,
+      "2,56": 5,
+      "2,57": 5,
+      "2,58": 5,
+      "2,64": 5,
+      "2,65": 5,
+      "2,66": 5,
+      "2,67": 5,
+      "2,68": 5,
+      "2,69": 5,
+      "2,107": 17,
+      "2,108": 11,
+      "2,109": 11,
+      "2,110": 11,
+      "2,111": 17,
+      "2,112": 11,
+      "2,113": 11,
+      "2,114": 11,
+      "2,122": 5,
+      "2,123": 5,
+      "2,124": 5,
+      "2,125": 5,
+      "2,126": 5,
+      "2,127": 5,
+      "2,148": 9,
+      "2,149": 9,
+      "2,150": 9,
+      "2,151": 9,
+      "2,152": 9,
+      "2,153": 9,
+      "2,154": 9,
+      "2,155": 9,
+      "2,156": 9,
+      "2,157": 9,
+      "2,158": 9,
+      "2,159": 9,
+      "2,160": 9,
+      "2,161": 9,
+      "2,162": 9,
+      "2,163": 9,
+      "2,164": 9,
+      "2,165": 9,
+      "2,166": 9,
+      "2,167": 9,
+      "2,168": 9,
+      "2,169": 9,
+      "2,170": 9,
+      "2,171": 9,
+      "2,172": 9,
+      "2,173": 9,
+      "3,2": 18,
+      "3,10": 19,
+      "3,11": 3,
+      "3,12": 3,
+      "3,13": 3,
+      "3,14": 3,
+      "3,15": 3,
+      "3,16": 3,
+      "3,17": 3,
+      "3,18": 3,
+      "3,19": 3,
+      "3,20": 3,
+      "3,21": 3,
+      "3,22": 3,
+      "3,23": 3,
+      "3,24": 3,
+      "3,25": 3,
+      "3,26": 3,
+      "3,27": 3,
+      "3,28": 3,
+      "3,29": 3,
+      "3,30": 3,
+      "3,31": 3,
+      "3,32": 3,
+      "3,33": 3,
+      "3,34": 3,
+      "3,35": 3,
+      "3,36": 3,
+      "3,37": 3,
+      "3,38": 3,
+      "3,39": 3,
+      "3,40": 3,
+      "3,41": 3,
+      "3,42": 3,
+      "3,43": 3,
+      "3,44": 4,
+      "3,55": 20,
+      "3,56": 11,
+      "3,57": 11,
+      "3,58": 11,
+      "3,59": 21,
+      "3,60": 3,
+      "3,61": 3,
+      "3,62": 3,
+      "3,63": 3,
+      "3,64": 3,
+      "3,65": 3,
+      "3,66": 3,
+      "3,67": 3,
+      "3,68": 3,
+      "3,69": 3,
+      "3,70": 4,
+      "3,120": 22,
+      "4,1": 23,
+      "4,2": 24,
+      "4,6": 24,
+      "4,10": 24,
+      "4,13": 24,
+      "4,18": 24,
+      "4,23": 24,
+      "4,25": 24,
+      "4,30": 24,
+      "4,35": 25,
+      "4,36": 5,
+      "4,37": 24,
+      "4,40": 24,
+      "4,45": 26,
+      "4,48": 26,
+      "4,52": 26,
+      "4,55": 27,
+      "4,59": 27,
+      "4,63": 26,
+      "4,67": 26,
+      "4,71": 27,
+      "4,75": 28,
+      "4,79": 27,
+      "4,82": 26,
+      "4,85": 27,
+      "4,88": 27,
+      "4,91": 27,
+      "4,94": 26,
+      "4,97": 26,
+      "4,100": 26,
+      "4,103": 26,
+      "4,106": 26,
+      "4,107": 29,
+      "4,111": 30,
+      "4,115": 27,
+      "4,118": 26,
+      "4,120": 11,
+      "4,121": 11,
+      "4,122": 31,
+      "4,123": 11,
+      "4,124": 1,
+      "4,125": 1,
+      "4,126": 1,
+      "4,127": 1,
+      "4,128": 1,
+      "4,129": 1,
+      "4,130": 1,
+      "4,131": 1,
+      "4,132": 1,
+      "4,133": 1,
+      "4,134": 1,
+      "4,135": 1,
+      "4,136": 1,
+      "4,137": 1,
+      "4,138": 1,
+      "4,139": 32,
+      "4,140": 1,
+      "4,141": 1,
+      "4,142": 1,
+      "4,143": 32,
+      "4,144": 11,
+      "4,145": 11,
+      "4,146": 11,
+      "4,147": 5,
+      "4,148": 5,
+      "4,149": 5,
+      "4,151": 5,
+      "5,1": 23,
+      "5,2": 23,
+      "5,6": 23,
+      "5,10": 23,
+      "5,13": 33,
+      "5,18": 33,
+      "5,19": 34,
+      "5,23": 23,
+      "5,25": 33,
+      "5,30": 33,
+      "5,35": 23,
+      "5,37": 35,
+      "5,40": 35,
+      "5,45": 23,
+      "5,48": 23,
+      "5,52": 23,
+      "5,55": 36,
+      "5,59": 36,
+      "5,63": 36,
+      "5,67": 36,
+      "5,68": 23,
+      "5,71": 37,
+      "5,75": 37,
+      "5,79": 23,
+      "5,82": 23,
+      "5,85": 23,
+      "5,88": 23,
+      "5,91": 23,
+      "5,94": 23,
+      "5,97": 23,
+      "5,100": 23,
+      "5,103": 23,
+      "5,107": 23,
+      "5,108": 23,
+      "5,111": 23,
+      "5,112": 23,
+      "5,118": 23,
+      "5,120": 38,
+      "5,121": 11,
+      "5,122": 39,
+      "5,123": 11,
+      "5,124": 1,
+      "5,125": 1,
+      "5,126": 1,
+      "5,127": 1,
+      "5,128": 1,
+      "5,129": 1,
+      "5,130": 1,
+      "5,131": 1,
+      "5,132": 1,
+      "5,133": 1,
+      "5,134": 1,
+      "5,135": 1,
+      "5,136": 1,
+      "5,137": 40,
+      "5,138": 1,
+      "5,139": 41,
+      "5,140": 1,
+      "5,141": 1,
+      "5,142": 1,
+      "5,143": 42,
+      "5,144": 11,
+      "5,145": 11,
+      "5,146": 11,
+      "5,147": 43,
+      "5,148": 5,
+      "5,149": 44,
+      "5,151": 9,
+      "5,174": 45,
+      "40,139": 5,
+      "40,140": 5,
+      "40,141": 5,
+      "40,142": 5,
+      "40,143": 5,
+      "41,14": 9,
+      "41,15": 9,
+      "41,16": 9,
+      "41,17": 9,
+      "41,18": 9,
+      "41,19": 9,
+      "41,20": 9,
+      "41,25": 9,
+      "41,26": 9,
+      "41,27": 9,
+      "41,28": 9,
+      "41,29": 9,
+      "41,30": 9,
+      "41,132": 12,
+      "41,133": 5,
+      "41,134": 5,
+      "41,135": 5,
+      "41,136": 5,
+      "41,137": 5,
+      "41,138": 5,
+      "41,139": 5,
+      "41,140": 5,
+      "41,141": 5,
+      "41,142": 5,
+      "41,143": 5,
+      "41,144": 46,
+      "41,145": 5,
+      "41,146": 5,
+      "41,147": 5,
+      "41,148": 5,
+      "41,149": 5,
+      "41,150": 5,
+      "41,152": 5,
+      "41,153": 5,
+      "41,154": 5,
+      "41,155": 5,
+      "42,14": 9,
+      "42,15": 9,
+      "42,16": 9,
+      "42,17": 9,
+      "42,18": 9,
+      "42,19": 9,
+      "42,20": 9,
+      "42,25": 9,
+      "42,26": 5,
+      "42,27": 5,
+      "42,28": 5,
+      "42,29": 5,
+      "42,30": 5,
+      "42,45": 0,
+      "42,46": 1,
+      "42,47": 1,
+      "42,48": 1,
+      "42,49": 1,
+      "42,110": 5,
+      "42,112": 5,
+      "42,114": 5,
+      "42,116": 5,
+      "42,118": 5,
+      "42,120": 5,
+      "42,122": 5,
+      "42,124": 5,
+      "42,126": 5,
+      "42,128": 5,
+      "42,129": 5,
+      "42,130": 5,
+      "42,131": 5,
+      "42,132": 5,
+      "42,133": 5,
+      "42,134": 5,
+      "42,135": 5,
+      "42,136": 5,
+      "42,137": 5,
+      "42,138": 5,
+      "42,139": 5,
+      "42,140": 5,
+      "42,141": 5,
+      "42,142": 5,
+      "42,143": 5,
+      "42,144": 5,
+      "42,145": 5,
+      "42,146": 5,
+      "42,147": 5,
+      "42,148": 5,
+      "42,149": 5,
+      "42,150": 5,
+      "42,152": 5,
+      "42,153": 5,
+      "42,154": 5,
+      "42,155": 5,
+      "43,14": 9,
+      "43,15": 9,
+      "43,16": 9,
+      "43,17": 9,
+      "43,18": 9,
+      "43,19": 9,
+      "43,20": 9,
+      "43,25": 5,
+      "43,26": 5,
+      "43,27": 5,
+      "43,28": 5,
+      "43,29": 5,
+      "43,30": 5,
+      "43,45": 16,
+      "43,46": 1,
+      "43,47": 1,
+      "43,48": 1,
+      "43,49": 1,
+      "43,141": 5,
+      "43,142": 5,
+      "43,143": 5,
+      "43,144": 5,
+      "43,145": 5,
+      "43,146": 5,
+      "43,147": 5,
+      "43,148": 5,
+      "43,149": 5,
+      "43,150": 5,
+      "44,141": 5,
+      "44,142": 5,
+      "44,143": 5,
+      "44,144": 5,
+      "44,145": 5,
+      "44,146": 5,
+      "44,147": 5,
+      "44,148": 5,
+      "44,149": 5,
+      "44,150": 5
+    },
+    "SheetStyle": {
+      "FontFamily": 1
+    }
+  },
+  "Spans": [
+    "1,2,1,4",
+    "1,6,1,4",
+    "1,23,2,5",
+    "1,35,2,5",
+    "1,45,1,5",
+    "2,2,1,4",
+    "2,6,1,4",
+    "2,45,1,5",
+    "3,2,1,8",
+    "3,10,1,35",
+    "3,45,1,10",
+    "3,55,1,4",
+    "3,59,1,12",
+    "42,25,2,6",
+    "42,45,1,5",
+    "43,45,1,5",
+    "1,53,2,6",
+    "1,64,2,6",
+    "1,130,2,7",
+    "5,124,1,4",
+    "5,128,1,5",
+    "5,133,1,4",
+    "5,137,1,2",
+    "5,139,1,4",
+    "5,147,1,2",
+    "5,143,1,4",
+    "5,120,1,2",
+    "5,2,1,4",
+    "5,6,1,4",
+    "5,10,1,3",
+    "5,13,1,5",
+    "5,18,1,5",
+    "5,23,1,2",
+    "5,25,1,5",
+    "5,30,1,5",
+    "5,35,1,2",
+    "5,37,1,3",
+    "5,40,1,5",
+    "5,45,1,3",
+    "5,48,1,4",
+    "5,52,1,3",
+    "5,55,1,4",
+    "5,59,1,4",
+    "5,63,1,4",
+    "5,67,1,4",
+    "5,71,1,4",
+    "5,75,1,4",
+    "5,79,1,3",
+    "5,82,1,3",
+    "5,85,1,3",
+    "5,88,1,3",
+    "5,91,1,3",
+    "5,94,1,3",
+    "5,97,1,3",
+    "5,100,1,3",
+    "5,103,1,3",
+    "5,115,1,3",
+    "6,1,32,118",
+    "43,147,2,4",
+    "43,141,2,4",
+    "41,144,2,7",
+    "40,139,3,5",
+    "43,106,1,26",
+    "6,120,32,53",
+    "5,151,1,2",
+    "5,171,1,2",
+    "5,153,1,2",
+    "5,155,1,2",
+    "5,157,1,2",
+    "5,159,1,2",
+    "5,161,1,2",
+    "5,163,1,2",
+    "5,165,1,2",
+    "5,167,1,2",
+    "5,169,1,2",
+    "42,128,1,2",
+    "42,130,1,2",
+    "42,106,1,2",
+    "42,108,1,2",
+    "42,110,1,2",
+    "42,112,1,2",
+    "42,114,1,2",
+    "42,116,1,2",
+    "42,118,1,2",
+    "42,120,1,2",
+    "42,122,1,2",
+    "42,124,1,2",
+    "42,126,1,2",
+    "41,152,2,4",
+    "5,122,1,2",
+    "5,149,1,2",
+    "41,132,2,7",
+    "1,122,2,6",
+    "5,107,1,4",
+    "5,111,1,4",
+    "2,107,1,4",
+    "1,107,1,4",
+    "2,111,1,4",
+    "1,111,1,4",
+    "3,120,1,2",
+    "4,2,1,4",
+    "4,6,1,4",
+    "4,10,1,3",
+    "4,13,1,5",
+    "4,18,1,5",
+    "4,23,1,2",
+    "4,25,1,5",
+    "4,30,1,5",
+    "4,35,1,2",
+    "4,37,1,3",
+    "4,40,1,5",
+    "4,45,1,3",
+    "4,48,1,4",
+    "4,52,1,3",
+    "4,55,1,4",
+    "4,59,1,4",
+    "4,63,1,4",
+    "4,67,1,4",
+    "4,71,1,4",
+    "4,75,1,4",
+    "4,79,1,3",
+    "4,82,1,3",
+    "4,85,1,3",
+    "4,88,1,3",
+    "4,91,1,3",
+    "4,94,1,3",
+    "4,97,1,3",
+    "4,100,1,3",
+    "4,103,1,3",
+    "4,107,1,4",
+    "4,111,1,4",
+    "4,115,1,3",
+    "4,120,1,2",
+    "4,122,1,2",
+    "4,124,1,4",
+    "4,128,1,5",
+    "4,133,1,4",
+    "4,137,1,2",
+    "4,139,1,4",
+    "4,143,1,4",
+    "4,147,1,2",
+    "4,149,1,2",
+    "4,151,1,2",
+    "4,153,1,2",
+    "4,155,1,2",
+    "4,157,1,2",
+    "4,159,1,2",
+    "4,161,1,2",
+    "4,163,1,2",
+    "4,165,1,2",
+    "4,167,1,2",
+    "4,169,1,2",
+    "4,171,1,2",
+    "41,106,1,2",
+    "41,108,1,2",
+    "41,110,1,2",
+    "41,112,1,2",
+    "41,114,1,2",
+    "41,116,1,2",
+    "41,118,1,2",
+    "41,120,1,2",
+    "41,122,1,2",
+    "41,124,1,2",
+    "41,126,1,2",
+    "41,128,1,2",
+    "41,130,1,2"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "受注業務Gタスク管理",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+        "TargetTableName": "V投入計画_受注側作業",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "SubConditions": [
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 1,
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_受注側作業",
+                "ColumnName": "長納期部材仕様確認",
+                "GUID": "0a48907a-4d28-46fb-98db-6f9607a79e1a"
+              },
+              "Value": "完了"
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 1,
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_受注側作業",
+                "ColumnName": "長納期部材社内展開",
+                "GUID": "aca554f2-dfa9-48ec-a553-5f2d4743f689"
+              },
+              "Value": "完了"
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 1,
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_受注側作業",
+                "ColumnName": "仕様確定",
+                "GUID": "5a255b48-d6eb-4f2a-853b-bf07e6ac5457"
+              },
+              "Value": "完了"
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 1,
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_受注側作業",
+                "ColumnName": "見積作成",
+                "GUID": "d9958320-9ba3-488d-8819-85f4dd6929ed"
+              },
+              "Value": "完了"
+            }
+          ],
+          "RelationType": 1
+        },
+        "ID": "513d5742b6b645f2abe573efe914ef13",
+        "Disabled": true
+      },
+      {
+        "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+        "TargetTableName": "V投入計画_受注側作業",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "CompareType": 2,
+          "ColumnBindingInfo": {
+            "TableName": "V投入計画_受注側作業",
+            "ColumnName": "大型小型個別_1",
+            "GUID": "41f0b7c5-81c3-4c5a-8aba-1f040cd05288"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=受注業務G作業管理!AT44"
+          }
+        },
+        "ID": "69594525d6ea4afbbb5d7595a6bb3ed9"
+      },
+      {
+        "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+        "TargetTableName": "投入計画_長期部材管理トランザクション明細",
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "投入計画_長期部材管理トランザクション明細",
+            "ColumnName": "艇種",
+            "GUID": "fdfb473e-bd0d-4d78-8f1e-e7c6ddee9446"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=受注業務G作業管理!DD3"
+          }
+        },
+        "ID": "27ef8dabc52a47eaa03126981104d777"
+      },
+      {
+        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+        "ListviewName": "リストビュー1",
+        "UpdateType": 6,
+        "UpdateListviewCommandRunTimeMethodSetting": {
+          "MethodName": "Reload",
+          "ParameterValues": {
+            "clearFilter": false,
+            "clearSort": false,
+            "clearRuntimeQueryConditions": false
+          }
+        }
+      },
+      {
+        "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
+        "ListviewName": "リストビュー2",
+        "UpdateType": 6,
+        "UpdateListviewCommandRunTimeMethodSetting": {
+          "MethodName": "Reload",
+          "ParameterValues": {
+            "clearFilter": false,
+            "clearSort": false,
+            "clearRuntimeQueryConditions": false
+          }
+        }
+      }
+    ],
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "ConditionFormatRulesCollection": {
+      "Rules": [
+        {
+          "$type": "Forguncy.ConditionFormat.FormulaRule, ServerDesignerCommon",
+          "Formula": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=受注業務G作業管理!$ER6=1"
+          },
+          "Priority": 11,
+          "GUID": "f52f0708-172b-4684-bc2c-9b0347fd64f7",
+          "StyleInfo": {
+            "Background": "Accent 5 40",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 3,
+          "Value1": "=\"発注完了\"",
+          "Priority": 10,
+          "GUID": "0ce999cc-15a2-4763-b7ed-9c3033aff019",
+          "StyleInfo": {
+            "Background": "#FF92D050",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 3,
+          "Value1": "=\"未発注\"",
+          "Priority": 9,
+          "GUID": "0c18639e-c35b-44a0-91fb-b937c71d0ab4",
+          "StyleInfo": {
+            "Background": "#FFFF9393",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "-",
+          "Priority": 8,
+          "GUID": "36378a50-3a89-4a6e-8964-cb78b16aacab",
+          "StyleInfo": {
+            "Background": "Accent 2 -25",
+            "Foreground": "Background 1 0",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.FormulaRule, ServerDesignerCommon",
+          "CellValueRuleType": 4,
+          "Priority": 7,
+          "GUID": "42d81fdf-62f2-4726-90da-f031003d7d91",
+          "StyleInfo": {
+            "Background": "#FFFFFF00",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "対応中",
+          "Priority": 6,
+          "GUID": "caa6cb4f-5583-4f4e-a6ab-cd4e24e2bda3",
+          "StyleInfo": {
+            "Background": "#FFFFFF00",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "未対応",
+          "Priority": 5,
+          "GUID": "74ee3400-7e68-4b7d-a02f-ca5d106b181a",
+          "StyleInfo": {
+            "Background": "Accent 4 60",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "完了",
+          "Priority": 4,
+          "GUID": "e3a64bb4-ee28-4c0a-81dd-71c82aa83449",
+          "StyleInfo": {
+            "Background": "Accent 2 -25",
+            "Foreground": "Background 1 0",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 6,
+          "Value1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=受注業務G作業管理!$AT$3"
+          },
+          "Priority": 3,
+          "GUID": "a31bc528-bf67-49be-bc7c-9addf70788f3",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 6,
+          "Value1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=受注業務G作業管理!$AT$3"
+          },
+          "Priority": 2,
+          "GUID": "335010e8-7d5a-443b-abc3-4e078fd04f2b",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "有",
+          "Priority": 1,
+          "GUID": "8511f04c-04ea-4a42-8f23-80fae93627b8",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.SpecificTextRule, ServerDesignerCommon",
+          "Value": "有",
+          "GUID": "72f73660-7a41-40c2-9a91-588924f19475",
+          "StyleInfo": {
+            "Background": "#FFFFB6C1",
+            "Foreground": "#FF8B0000"
+          }
+        }
+      ]
+    }
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//vE2BN4XIb0s3DfuMzL0Q0JDp2nATWbOGCWcLfGU0AIeHctSmacQnpayNVLqMwBbZWq3xZumKkHcDb8LSCpLKmbHle4ey7XGLx9JsTQyj2TPdPbw12ZBHLraW6Uz0hz7g2kIilrRshIAR3P5ltWuLo4pZWU4Cpvvgu7KKOu3o9YQ/zqoL/WyTDoFaXBbJeX6a4In1uqgL+sUYVwEde/GM4jW8TCHdyr+HRrnxFRm968AGcu1NwZRgG3IkZZS5sz9i876Yks3aoLfBawDDmi9OMPwmooJGheMiAABEo3HouycG6AcIoM2G78Wk+cf1wW1cJ6OkUXNuxO6PbGR1dBnJ89xJy2Zi0r2UyX+k8IwtIeeeuTTEKQfNsPfV/WnkM77CJrflm8YK80gnOiT6K+fXhfNNJbnVoQoojhO8CRg1InC63XipbcAL9xv8VwOQ5TjjfpZvAVTeqQNPPys7bZmjItg+LO1Or8L6KIzzJRUQMYWQvaxPPLhq59L/i5VTn4UGNrrQRlXmBC093sRfjNHxd4ZZtOo8b+yWTAunzZ2VymOJLGV7ba1cMZfFuanjXAHYGr2HDc0ksDVdRDUEeCcRgloniK4taXkrqN2dHYneHT8DJTOut+xN1ZaCjOGtZlNDPcYL/EVmiyY+/rC3ErDPUJbrk1n1y5M6bMUNoIczDST/u1monjr8g+zlIT6d2b4QV3I8TAMqm5DbMD9rFf87Yd2pDyE+IUL+TpPwpPppUtuqXziBYOSX3GG5LaVkC4vhVFudXvUvwVoTpQJ9U8jTl76MYFvaT0cJSLX9BETF9DwfMFp7RZMFIMMvDUO1TbSja4BTnOPbllvsfPhphESia4m9QUOornps/e/r2LX0ZmCZSCDrlXUSSg+2EWKzokPctUuZbyUcZgJVY3uJ8wL+BQ==|920

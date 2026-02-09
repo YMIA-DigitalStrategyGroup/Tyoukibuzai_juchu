@@ -1,0 +1,35 @@
+{
+  "Name": "updateSQLServer",
+  "Description": "投入計画の変化情報をkintoneからDLしてテーブルにインポートした情報に更新する",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "SqlServer1",
+      "Params": {},
+      "SqlStatement": "update 投入計画_kintone連携用 \r\nset\r\n 指令書期限 = tn.大型小型個別_1, \r\n 旧_指令書期限 = tn.大型小型個別_2,\r\n エンジン必要日 = tn.エンジン必要日_1, \r\n 旧_エンジン必要日 = tn.エンジン必要日_2\r\nfrom 投入計画_kintone連携用 kin\r\ninner join 投入計画変化管理 tn on \r\nkin.艇種 = tn.艇種 and \r\nkin.艇番 = tn.艇番",
+      "ID": "31a3d72c08b6422a9e8ddf7a2d919f36"
+    }
+  ]
+}

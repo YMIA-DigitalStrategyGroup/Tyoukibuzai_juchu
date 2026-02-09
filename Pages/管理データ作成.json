@@ -1,0 +1,377 @@
+{
+  "Rows": {
+    "InLogicalVisibleIndexes": [
+      0,
+      1
+    ],
+    "Count": 8
+  },
+  "Cols": {
+    "Count": 26
+  },
+  "Values": {
+    "0,12": "本日日付",
+    "1,12": "最新",
+    "1,18": "比較",
+    "3,1": "最新データ日付",
+    "3,17": "差分データ作成",
+    "5,1": "比較データ日付"
+  },
+  "Formulas": {
+    "1,1": "ODATA(\"V投入計画_投入計画日?$select=*&$top=1&$orderby=設定日付 asc\")",
+    "0,1": "ODATA(\"V投入計画_投入計画日?$select=*&$top=1&$orderby=設定日付 desc\")",
+    "0,21": "TODAY()",
+    "0,17": "TEXT(V1,\"yyyy/MM/dd\")",
+    "1,14": "TEXT(H4,\"yyyy/MM/dd\")",
+    "1,20": "TEXT(H6,\"yyyy/MM/dd\")"
+  },
+  "AttachInfos": {
+    "3,7": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "DataSource": "V投入計画_投入計画日全情報",
+        "ValueColumnBindingInfo": {
+          "TableName": "V投入計画_投入計画日全情報",
+          "ColumnName": "設定日付",
+          "GUID": "94205753-1290-4bed-a20d-18f97bcffdbf"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "V投入計画_投入計画日全情報",
+          "ColumnName": "設定日付",
+          "GUID": "77933ca6-a033-4f54-8feb-4a6cc9a044e3"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_投入計画日全情報",
+                "ColumnName": "設定日付",
+                "GUID": "d5551042-89d6-4e75-a4d7-aa3e54449cdf"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "CellDefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=管理データ作成!B1"
+        }
+      }
+    },
+    "3,17": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "差分データを作成しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "初期データ作成",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "最新データ日付",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=管理データ作成!O2"
+                        }
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "比較データ日付",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=管理データ作成!U2"
+                        }
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "本日日付",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=管理データ作成!R1"
+                        }
+                      }
+                    ],
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": "差分データの作成が完了しました！！"
+                  },
+                  {
+                    "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon",
+                    "Disabled": true
+                  }
+                ],
+                "ID": "a459f5d7-6578-4023-a958-5dab8ae91603"
+              }
+            ]
+          }
+        ],
+        "Text": "差分データ作成",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "5,7": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "DataSource": "V投入計画_投入計画日全情報",
+        "ValueColumnBindingInfo": {
+          "TableName": "V投入計画_投入計画日全情報",
+          "ColumnName": "設定日付",
+          "GUID": "31fc0fa0-8991-42de-b95b-51028d85ded9"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "V投入計画_投入計画日全情報",
+          "ColumnName": "設定日付",
+          "GUID": "a23b5615-12d9-4223-bdd9-4b5fc13414af"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "V投入計画_投入計画日全情報",
+                "ColumnName": "設定日付",
+                "GUID": "3ceac5c6-4031-49b3-a5a7-3f884b500859"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "CellDefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=管理データ作成!B2"
+        }
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0,
+        "Formatter": 1
+      },
+      {
+        "FontFamily": 0
+      },
+      {
+        "Background": 2,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "Formatter": 1,
+        "HorizontalAlignment": 4,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderTop": 0
+      },
+      {
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontSize": 18.666666666666664
+      },
+      {
+        "BorderBottom": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderRight": 0
+      },
+      {
+        "Background": 5,
+        "FontFamily": 0,
+        "Formatter": 6,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 1,
+        "HorizontalAlignment": 4,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "yyyy/m/d",
+        "Accent 1 80",
+        "black",
+        "Center",
+        "Accent 5 80",
+        "[AUTO]General"
+      ],
+      "Borders": [
+        {
+          "Color": 3
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,1": 0,
+      "0,2": 1,
+      "0,3": 1,
+      "0,4": 1,
+      "0,5": 1,
+      "0,6": 1,
+      "0,7": 1,
+      "0,8": 1,
+      "0,21": 1,
+      "0,22": 1,
+      "0,23": 1,
+      "0,24": 1,
+      "1,1": 0,
+      "1,2": 1,
+      "1,3": 1,
+      "1,4": 1,
+      "1,5": 1,
+      "1,6": 1,
+      "1,7": 1,
+      "1,8": 1,
+      "1,20": 1,
+      "1,21": 1,
+      "1,22": 1,
+      "1,23": 1,
+      "3,1": 2,
+      "3,2": 3,
+      "3,3": 3,
+      "3,4": 3,
+      "3,5": 3,
+      "3,6": 3,
+      "3,7": 4,
+      "3,8": 5,
+      "3,9": 5,
+      "3,10": 5,
+      "3,11": 5,
+      "3,12": 5,
+      "3,13": 5,
+      "3,14": 6,
+      "3,17": 7,
+      "4,1": 3,
+      "4,2": 3,
+      "4,3": 3,
+      "4,4": 3,
+      "4,5": 3,
+      "4,6": 3,
+      "4,7": 8,
+      "4,8": 9,
+      "4,9": 9,
+      "4,10": 9,
+      "4,11": 9,
+      "4,12": 9,
+      "4,13": 9,
+      "4,14": 10,
+      "5,1": 11,
+      "5,2": 12,
+      "5,3": 12,
+      "5,4": 12,
+      "5,5": 12,
+      "5,6": 12,
+      "5,7": 13,
+      "5,8": 5,
+      "5,9": 5,
+      "5,10": 5,
+      "5,11": 5,
+      "5,12": 5,
+      "5,13": 5,
+      "5,14": 6,
+      "6,1": 12,
+      "6,2": 12,
+      "6,3": 12,
+      "6,4": 12,
+      "6,5": 12,
+      "6,6": 12,
+      "6,7": 8,
+      "6,8": 9,
+      "6,9": 9,
+      "6,10": 9,
+      "6,11": 9,
+      "6,12": 9,
+      "6,13": 9,
+      "6,14": 10
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "3,1,2,6",
+    "5,1,2,6",
+    "0,1,1,8",
+    "1,1,1,8",
+    "3,7,2,8",
+    "5,7,2,8",
+    "3,17,4,8",
+    "0,17,1,4",
+    "0,21,1,4",
+    "1,14,1,4",
+    "1,20,1,4"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "受注業務Gタスク管理",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//gdUWX/MFsfpHW+m6EzIQOQjeK3U3sFZYpRjruHowl6Brb9hdzlCeWy4UjM4vgcUgLczqXBdpuFeLJMAmgE7FwJWg8koCpa+XtEeAw0NteymGZqIxQNS8y3hvO54Vekmgmu+2i7nvQ9jOxNgYh3U8pZVDHdOPeRb4T9FnB7rGFrs5GVPV5izoh315Bb+BAAO3l2wdd6yjeXt9edZ22F8bPnW/3r8dBNJIbzROUQ0kdmmMtXP6ag4sVtpTpsZ7eI7IevTZaR+mIE2/3AaZwDI/PrMG/ILOTq/4mCpMq20kcnipdhKDIejB147sdEW8RuGACC+yMDEo56oHYIOt+9SA0/Tprl9rES1elltmwbqI8s9g3QAMvsOIzwXgvn/uvVs77MYoUTPBwkAQqPTv9sZOH+Yo0Yh8y/x/XOH0EC/cEoEp9eaWwcL9HNwi0yL8YHbMK5MTOQTgIJwRRMVCETVuDlA1KHdKSNLQ+zGFvPctqIqxUXE6mkggypMrpJm7CkyrA85Zp3oPyyf92qaPU3WNYJRmACaoX2aCIoUvyvllDPIlBqYz2/M7sE/mnXc+KkPdVF+P2bv26pNkS2M1s16+cHiqW4W8uIvMsg45Dq5AzMpBt2o1MxOFkGu4fgjLrBCM7biwxsxty72PjXnRM8L2I0Gs48Lpst3vS4Z0qtmvzM/CDl3/Z+3cY9d3xGdlKjFzr22kni30LUYMNqj9Ox36UXt6z0jrPtSNIeYyrj/Ks5I9mwop4dsQcsx3eGJu1IPp9irBQhHiZitHCkeRVgqy3ZzmtTCrmBKWMzpew1DGloJXGK8qHUmOI7prt4CTzT4vB2cNUuqqXCDj9G30wY3JXUdO852JdCt5RBv+/9F0Nz2d+M/GlZOY1PodsyF/4zRKAfQk9notk4n0nW2NW1JEzQ==|920

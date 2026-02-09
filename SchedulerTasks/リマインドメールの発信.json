@@ -1,0 +1,116 @@
+{
+  "Name": "リマインドメールの発信",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.OneTimeScheduleTriggerSaveData, ServerDesignerCommon",
+      "StartDateTime": 45863.0,
+      "ScheduleRunInDebugServer": false
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "仕様決定必要日",
+      "ParameterValue": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=TODAY()-21"
+      },
+      "ID": "d6fedd38e8e743de96f3881f9b565904"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "期限締切メール",
+      "TableValue": {
+        "TableName": "投入計画_長期部材管理トランザクション明細",
+        "BindingInfos": [
+          {
+            "GUID": "a587eedb-786a-4ad3-9ecc-2833d5c518d3",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "艇種",
+              "GUID": "17ffbbe1-5e87-4d36-b2fa-92dd28e46c42"
+            },
+            "ColumnName": "艇種"
+          },
+          {
+            "GUID": "19ee1802-ec4a-4bec-a4d4-c715474311ed",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "艇番",
+              "GUID": "72570cf1-cf15-4ffa-87b8-d07ff5663498"
+            },
+            "ColumnName": "艇番"
+          },
+          {
+            "GUID": "a1ba1835-2ced-4696-b20f-368af9892c7e",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "明細番号",
+              "GUID": "aa2261e7-49b3-4c7a-9bff-14e06072e0a5"
+            },
+            "ColumnName": "明細番号"
+          },
+          {
+            "GUID": "84791043-abcb-4827-b6c9-e463388b644f",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "品番",
+              "GUID": "de5d2d84-aa95-45fd-9833-4f299c8a26fa"
+            },
+            "ColumnName": "品番"
+          },
+          {
+            "GUID": "9419ed34-d157-4785-9cd6-1b1ec899982f",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "品名",
+              "GUID": "a13ed53d-b010-4dff-b28c-5dea1674e69f"
+            },
+            "ColumnName": "品名"
+          },
+          {
+            "GUID": "20056c6e-2e62-4783-b214-c2d3c5d44d48",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "支給区分",
+              "GUID": "4cf76f30-1690-438c-82a7-e2059d29a44b"
+            },
+            "ColumnName": "支給区分"
+          },
+          {
+            "GUID": "25f61f26-e47e-4a99-bf47-ef2f0b7b6322",
+            "BindingInfo": {
+              "TableName": "投入計画_長期部材管理トランザクション明細",
+              "ColumnName": "個数",
+              "GUID": "366287c1-88b7-4ad6-898b-9540f572dc52"
+            },
+            "ColumnName": "個数"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+          "ColumnBindingInfo": {
+            "TableName": "投入計画_長期部材管理トランザクション明細",
+            "ColumnName": "発注期限",
+            "GUID": "c19e88b3-14c4-4ebd-b7f9-3952e25e4480"
+          },
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=仕様決定必要日"
+          }
+        }
+      },
+      "ID": "42ebe5a53d6c4bcf9b3932fd5a9a0735"
+    },
+    {
+      "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+      "EnhancedRecipient": {
+        "CommonValue": "kazuki_irei@yanmar.com"
+      },
+      "Subject": "期限が近いぞー",
+      "Content": "[=期限締切メール]",
+      "ID": "1de09ad03bdc41b6b5a183cd10292f79"
+    }
+  ]
+}
