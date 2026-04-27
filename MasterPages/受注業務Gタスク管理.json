@@ -54,6 +54,7 @@
         "TemplateKey": "_RS_Dark_ThemeStyle2",
         "Items": [
           {
+            "Value": "タスク管理表",
             "Text": "タスク管理表",
             "IconPath": "Navigation/165_home_3.svg",
             "SelectedIconColor": "Background 1",
@@ -71,6 +72,7 @@
             ]
           },
           {
+            "Value": "変更履歴",
             "Text": "変更履歴",
             "IconPath": "Navigation/183_table_2.svg",
             "SelectedIconColor": "Background 1",
@@ -82,6 +84,7 @@
             ],
             "SubItems": [
               {
+                "Value": "変更比較表示",
                 "Text": "変更比較表示",
                 "SelectedIconColor": "Background 1",
                 "SelectedIconColorUseItemColor": true,
@@ -98,6 +101,7 @@
                 ]
               },
               {
+                "Value": "変更履歴一覧",
                 "Text": "変更履歴一覧",
                 "SelectedIconColor": "Background 1",
                 "SelectedIconColorUseItemColor": true,
@@ -116,6 +120,7 @@
             ]
           },
           {
+            "Value": "管理データ作成",
             "Text": "管理データ作成",
             "IconPath": "Chart/363_column_chart_2.svg",
             "SelectedIconColor": "Background 1",
@@ -201,4 +206,4 @@
       "Size": "2200,100"
     }
   ]
-}//iCJ/nYvLjGYA+MHTDbtf7WsE68sVGSuEzeDqqE91qIw9NxLsWdbM+qDXfyplo0lfoFU6sul2HabIVDtC0ftxhyQ8Y3x2poDNT0Or2rc+beWflLdCTukmul+wfnMIRy73cB4t1BkwqIc0MvJFWJe0v58c9O8MxSsyTgCiNWzFy2luGKoLXOS88KEJ3yCTIY7XrRqpvjGjUnZqqANkLDJH04UctyGqsrZVGaiHVwDi2D5MtGpIF2Nt2fSIBWRnIkMbc4jGzwSzATpYKQCRUF5ccrzdickk9c6DEEqS7em4rf6Ijydll7fWy5zdJ9Jmjp4tDXaY0pFMK6mL6KphT24FmYiHSjzdNZ/hkwDTpBvdyJVEzA5XOrMUJUdlEEmoyz44Yo0tLRbmmdlO61OVyuUE78Ua4ZGC2izh8+14jpLrij7nNXSY4n/zQL5CquYWkZyeMIql4H7i0rSj9QDd3Y2S4VLo1J7r5ylscbbM2FN4O/3OjrzFuPm7rEv+MUhSr/mCEvBLjCRy8LJHsazdSqnL7oEVHYfJK+VT/+avEyrerEuX2XMPTXFsX0qZEh3hMhD0I+L10IHJjxmzr6dNLVwP8jDGXH39zLelfYBfeXUJzNILijiBWp3Mb6Snr/amRZXd1O3g2EcDKuh146X/YH7WSVU8zxWfXkzYryk1KlsciXOjGt1AjRno/DYgPT/XaHu/Bco/zpxmPklI8L/qvxmJjUPsTgFHxNvI1bt/692xzKwrWlTQbJDZOTShnXG75HXmuEHW/KXegeZlMwiKu5cjo7RP5Vbwi3Z3t4mYRhc10FOQQkMSr3w4rzFHTdjLALaNE+lazpKFhMWPbEVWEi2AM5eLYov7qXkKsb5xyTMjlgdbiFUT69vhQHccfnLd4x/J29h6fl3fc3HH7UQNoiXU/g==|920
+}//NKaXY93FRq0sKjiatTMPeWnWJ1Puql74R5A9TgHMfY8qQ4r1xHfoN/w6IDd/9pC+cCCOws3+RrTSafWUgP+nROTejntTxX82VUD93TbsmPHGIpBC7XJmTYNfLDdRefx728xJ1XTZo+KmlmRp+rhBvUBJQYChlaaqDWrUUDANZAeLTsqTNNdkNVBVSuFWj370pwabvegymh7SC7kbDfnDvvYKuGvMZQLC57if+WEQcHQlHrWpMVjdFJNbCYeDJ/j/HEnoPQ5EMPlt4AKkl7chh/CE4w2MP78r3welGpBcaBDMkZ9xS+X5fJnIiV65CjnylrDTURdYht8V69yHAZDSRHWx4nD6O3yOXK1D0PrgUsjgHXrO1Cfkjlj4zPi6xiX7D/5G8mkJ9wL24u2N6JUjYyMJfpionIXA8t/crCa5GUC60a79fqBpW5gTPUacBouGjqbGuiPYJzFVjbNmkpn+JPk60alBRehC+3UeYGHPce3vznIdt7/fZQfdp3FodA07z6MPO1QM5GWNG8qud/SgV0oSqtIrl8PYNXrrLmziLA65p1sSjbOATqlJWi3nyUmOHsVPTChktYh6hMV3rLcblLpyJrU7rN7Ip5VwfSdBMeNSZLBP2+gd+QrrUiT1UUDIChIFxK6bL0ysF/WGKRw4ACpDhl4/xtcnT3eBmk+qB2mM7OGiYcmIda9CNypFr6+Jb8ic06LPaMGCM4lJLrSJWwDBEw0enPj8xH/3o+7lAbDJVaYgIMHzOhSteXa6rMPmbOOE3hz894seTKkfFovaIIlkTfRjtilYPREBQifJCO2WGFkUSM3W79viRPyro6P+1HKWm5m2vohmoaeLVGyNRBfushfvb2ZelTZfQpmqPfFiHXjBGnqR5oOf9Pz5Jes82QiWRYbKyXrP/MVMv+zZLw==|920
