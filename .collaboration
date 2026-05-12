@@ -166,7 +166,7 @@
       "UserName": "UNITY\\999D4610",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-05-11T09:02:04.9852116+09:00",
+    "LockDateTime": "2026-05-12T14:09:03.5368811+09:00",
     "ModuleType": 1,
     "ToRemoveFiles": [
       "Pages\\受注業務G作業管理.json",
@@ -175,7 +175,17 @@
   },
   {
     "ModuleName": "PCPage/長期部材設定画面",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-05-12T14:09:03.535647+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\長期部材設定画面.json",
+      "Pages\\長期部材設定画面.rd"
+    ]
   },
   {
     "ModuleName": "PCPage/データ履歴一覧",
