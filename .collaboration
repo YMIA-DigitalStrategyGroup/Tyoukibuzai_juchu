@@ -354,13 +354,13 @@
     "ModuleType": 6
   },
   {
-    "ModuleName": "PCPage/長納期部材マスタ",
+    "ModuleName": "PCPage/長納期部材マスタ管理画面",
     "State": 3,
     "LockedBy": {
       "UserName": "UNITY\\999D4610",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-27T16:28:59.6701965+09:00",
+    "LockDateTime": "2026-07-27T16:29:15.3023183+09:00",
     "ModuleType": 1
   }
 ]
