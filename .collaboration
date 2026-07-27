@@ -223,7 +223,17 @@
   },
   {
     "ModuleName": "PCPage/長期部材設定画面 (2)",
-    "ModuleType": 1
+    "State": 2,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-27T16:27:00.8515826+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\長期部材設定画面 (2).json",
+      "Pages\\長期部材設定画面 (2).rd"
+    ]
   },
   {
     "ModuleName": "MasterPCPage/FGC_ユーザーマスターページ",
